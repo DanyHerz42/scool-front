@@ -1,0 +1,107 @@
+.register__container {
+    // background-color: red;
+    display: flex;
+}
+
+.register__container-form {
+    width: 50%;
+    height: 100vh;
+    // background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.register__container-form-title {
+    color: $naranja;
+    display: flex;
+    align-items: center;
+    img {
+        margin-left: 10px;
+        height: 40px;
+    }
+}
+.register__container-form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
+    // background-color: aqua;
+    width: 100%;
+    align-items: center;
+
+    input {
+        outline: none;
+        border: none;
+        background-color: rgba($color: #B7B7B7, $alpha: 0.38);
+        width: 60%;
+        height: 52px;
+        border-radius: 47px;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    button {
+        background-color: $naranja;
+        width: 30%;
+        height: 56px;
+        outline: none;
+        border: none;
+        border-radius: 28px;
+        color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    
+}
+.register__container-form-recovery {
+    display: flex;
+    p {
+        opacity: .7;
+    }
+    a {
+        margin-left: 5px;
+        color: #005DFF;
+    }
+}
+.register__container-space {
+    width: 50%;
+    height: 100vh;
+    background-image: url('../../assets/imgs/fondoLogin.jpg');
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.register__container-space-title {
+    font-size: 1.8em;
+    text-align: center;
+}
+.register__container-space-register {
+
+    p {
+        font-size: 1.5em;
+        opacity: .9;
+        
+    }
+    button {
+        margin-top: 15px;
+        text-align: center;
+        width:260px;
+        background-color: transparent;
+        border-radius: 28px;
+        color: white;
+        height: 60px;
+        cursor: pointer;    
+        font-size: 1.2em;
+        outline: none;
+        border: 3px solid white;
+
+        &:hover {
+            background-color: white;
+            color: orangered;
+        }
+    }
+   
+}
