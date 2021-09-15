@@ -5,7 +5,9 @@ import {
     Route,
     // Redirect
 } from "react-router-dom";
+
 import { AuthRouter } from './AuthRouter';
+import { MainRouter } from './MainRouter';
 
 export const AppRouter = () => {
     return (
@@ -14,8 +16,8 @@ export const AppRouter = () => {
                 <Route path="/auth">
                     <AuthRouter />
                 </Route>
-                <Route path="/" exact>
-                    {/* <AuthRouter /> */}
+                <Route path="/">
+                    <MainRouter/>
                 </Route>
                 {/* <Redirect to="/auth/login" /> */}
             </div>
