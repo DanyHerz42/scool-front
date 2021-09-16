@@ -1,0 +1,53 @@
+.menu-short__container {
+    // border: 1px solid black;
+    grid-area: 1 / 1 / 6 / 2;
+    background: linear-gradient($naranja, rgb(189, 124, 34));
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+    
+}
+
+
+
+.menu-short__icon {
+    color: white;
+    cursor: pointer;
+    svg {
+        font-size: 50px;
+    }
+}
+
+
+
+
+.menu-short__nav {
+    
+    ul{
+        list-style: none;
+        padding: 0;
+        
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        
+        svg {
+            font-size: 50px;
+            margin-top: 30px;
+        }
+    }
+    .menu-short__active {
+        color: black;
+    }
+
+}
+
+.menu-short__logout {
+    color: white;
+    svg {
+        font-size: 50px;
+    }
+}
+

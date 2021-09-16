@@ -14,3 +14,10 @@ html, body {
     grid-template-columns: 315px 70px 1fr 1fr;
     grid-template-rows: 5% repeat(4, 1fr);
 }
+
+.container-main-short {
+    height: 100vh;
+    display: grid;
+    grid-template-columns:75px 70px 1fr 1fr;
+    grid-template-rows: 5% repeat(4, 1fr);
+}

@@ -13,12 +13,9 @@ export const AppRouter = () => {
     return (
         <Router>
             <div>
-                <Route path="/auth">
-                    <AuthRouter />
-                </Route>
-                <Route path="/">
-                    <MainRouter/>
-                </Route>
+                <Route path="/" component={MainRouter}/>
+                <Route path="/auth" component={AuthRouter} />
+                    
                 {/* <Redirect to="/auth/login" /> */}
             </div>
         </Router>

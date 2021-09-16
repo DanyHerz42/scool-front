@@ -1,18 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink, useLocation } from 'react-router-dom';
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
+import { UiContext } from '../../context/uiContext';
+import { types } from '../../types/types';
 
 
 export const Menu = () => {
 
     let location = useLocation();
-  console.log(location.pathname);
+  
+    const {dispatch} = useContext(UiContext);
+
+    const handleMenuShort = () => {
+    
+        dispatch({
+            type: types.uiCloseMenu
+        })
+    }
 
     return (
         <div className="menu__container">
-            <div className="menu__icon" onClick={() => console.log('click')}>
+            <div className="menu__icon" onClick={handleMenuShort}>
             <ArrowBackIosIcon className="menu__icon-burger" />
             </div>
 
