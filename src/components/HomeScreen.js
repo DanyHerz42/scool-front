@@ -19,7 +19,7 @@ export const HomeScreen = () => {
             {/* <div className="chat__container">Chat</div> */}
             <Chat />
             <div className="container-info">
-                <img src={SinInfo}/>
+                <p>Info</p>
             </div>
         </div>
     )
