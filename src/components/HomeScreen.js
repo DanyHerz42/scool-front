@@ -2,6 +2,9 @@ import React, { useContext } from 'react'
 import { UiContext } from '../context/uiContext'
 import { Menu } from './ui/Menu'
 import { MenuShort } from './ui/MenuShort';
+import { Header } from './ui/Header';
+import { Chat } from './ui/Chat';
+import SinInfo from '../assets/imgs/info.jpg'
 
 export const HomeScreen = () => {
 
@@ -12,9 +15,12 @@ export const HomeScreen = () => {
             {
                 menu.menuOpen ? <Menu /> : <MenuShort />
             }
-            <div className="header__container">Title</div>
-            <div className="chat__container">Chat</div>
-            <div className="container-info">Info</div>
+            <Header title="Mis clases"/>
+            {/* <div className="chat__container">Chat</div> */}
+            <Chat />
+            <div className="container-info">
+                <img src={SinInfo}/>
+            </div>
         </div>
     )
 }

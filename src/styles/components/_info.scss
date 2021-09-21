@@ -1,5 +1,13 @@
 .container-info {
-    border: 1px solid black;
+    // border: 1px solid black;
     grid-area: 2 / 3 / 6 / 5;
     background-color: #F5F7F9;
+    display: flex;
+    // background-color: white;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 500px;
+    }
 }
