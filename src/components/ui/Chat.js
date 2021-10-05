@@ -9,6 +9,13 @@ export const Chat = () => {
             <AccountCircleIcon />
             <AccountCircleIcon />
             <AccountCircleIcon />
+            <AccountCircleIcon />
+            <AccountCircleIcon />
+            <AccountCircleIcon />
+            <AccountCircleIcon />
+            <AccountCircleIcon />
+            <AccountCircleIcon />
+         
         
         </div>
     )
