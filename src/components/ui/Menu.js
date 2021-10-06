@@ -13,19 +13,28 @@ import ChatIcon from '@material-ui/icons/Chat';
 import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
+import { AuthContext } from '../../context/authContext';
 
 export const Menu = () => {
 
     let location = useLocation();
 
     const { dispatch } = useContext(UiContext);
-
+    const {dispatch: dispatchContext} = useContext(AuthContext)
+    
     const handleMenuShort = () => {
 
         dispatch({
             type: types.uiCloseMenu
         })
     }
+
+    const  handleStartLogout = () => {
+        localStorage.clear();
+        dispatchContext(logout())
+    }
+
+    const logout = () => ({type: types.authLogout})
 
     return (
         <div className="menu__container">
@@ -75,21 +84,7 @@ export const Menu = () => {
                     </li>
                 </ul>
             </nav>
-
-            {/* <nav className="menu__nav">
-                <ul>
-                    <li className="contenedor__test">
-                  
-                        <p>Lol</p>
-                        <p>Mis clases</p>
-                    </li>
-                    <li className="contenedor__test">
-                        <EventNoteIcon/>
-                        <p>Calendario</p>
-                    </li>
-                </ul>
-            </nav> */}
-            <div className="menu__logout">
+            <div className="menu__logout" onClick={handleStartLogout}>
                 <MeetingRoomIcon />
                 <p>Cerrar sesión</p>
             </div>

@@ -7494,6 +7494,11 @@
     "array-includes" "^3.1.2"
     "object.assign" "^4.1.2"
 
+"jwt-decode@^3.1.2":
+  "integrity" "sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A=="
+  "resolved" "https://registry.npmjs.org/jwt-decode/-/jwt-decode-3.1.2.tgz"
+  "version" "3.1.2"
+
 "killable@^1.0.1":
   "integrity" "sha512-LzqtLKlUwirEUyl/nicirVmNiPvYs7l5n8wOPP7fyJVpUPkvCnW/vuiXGpylGUlnPDnB7311rARzAt3Mhswpjg=="
   "resolved" "https://registry.npmjs.org/killable/-/killable-1.0.1.tgz"
@@ -11542,6 +11547,11 @@
     "stable" "^0.1.8"
     "unquote" "~1.1.1"
     "util.promisify" "~1.0.0"
+
+"sweetalert2@^11.1.7":
+  "integrity" "sha512-7MHQVtKCTORfA9e58g9ZOfT3X58DkSBtvoCQJnqSHobXXb5C7aB8Yg/tAccTFnefCUBU41PoStjXMkzG3bNeig=="
+  "resolved" "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.1.7.tgz"
+  "version" "11.1.7"
 
 "symbol-tree@^3.2.4":
   "integrity" "sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw=="

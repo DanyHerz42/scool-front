@@ -88,6 +88,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
+    p {
+        &:hover {
+            color: red;
+        }   
+    }   
 }
 
 // .menu__active {

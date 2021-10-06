@@ -4,7 +4,7 @@ import { Menu } from './ui/Menu'
 import { MenuShort } from './ui/MenuShort';
 import { Header } from './ui/Header';
 import { Chat } from './ui/Chat';
-import SinInfo from '../assets/imgs/info.jpg'
+
 
 export const HomeScreen = () => {
 
