@@ -4,10 +4,53 @@
     background-color: #F5F7F9;
     display: flex;
     // background-color: white;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
 
     img {
         height: 500px;
     }
+}
+
+
+//******Carpeta*****//
+
+.carpeta {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.back > .rectan-small {
+    margin-top: 5px;
+    margin-left: 20px;
+
+    width: 40px;
+    height: 40px;
+    background-color: #f0ad4e;
+    display: inline-block;
+}
+.back > .triangulo {
+    margin-top: 5px;
+
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #f0ad4e;
+    border-bottom: 20px solid #f0ad4e;
+    display: inline-block;
+}
+.back > .rectan-big {
+
+    margin-left: 20px;
+
+    width: 120px;
+    height: 50px;
+    background-color: #f0ad4e;
+    display: flex;
+}
+
+.icon--plus > path{
+    stroke-linejoin: round;
 }
