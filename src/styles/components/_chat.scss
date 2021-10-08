@@ -1,7 +1,7 @@
 .chat__container {
     // border: 1px solid black;
     grid-area: 2 / 2 / 6 / 2;
-    background-color: #E2DDDD;
+    // background-color: #E2DDDD;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,8 +9,9 @@
     overflow-x: hidden;
 
     svg {
-        font-size: 70px;
+        font-size: 60px;
         cursor: pointer;
+        margin-top: 20px;
     }
 
     &::-webkit-scrollbar {

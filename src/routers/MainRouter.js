@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import {
     Switch,
     Route,
@@ -6,19 +6,14 @@ import {
 import { CalendarScreen } from '../components/CalendarScreen';
 import { ChatScreen } from '../components/ChatScreen';
 import { HomeScreen } from '../components/HomeScreen';
-import { UiContext } from '../context/uiContext';
-import { uiReducer } from '../reducers/uiReducer';
+import {UiProvider } from '../context/uiContext';
+
 
 export const MainRouter = () => {
 
-    const initialState = {
-        menuOpen: true
-    }
-
-    const [menu, dispatch] = useReducer(uiReducer, initialState);
-    
+   
     return (
-        <UiContext.Provider value={{menu, dispatch}}>
+        <UiProvider>
             <div>
                 <Switch>
                     <Route exact path="/" component={HomeScreen} />
@@ -30,6 +25,6 @@ export const MainRouter = () => {
 
                 </Switch>
             </div>
-        </UiContext.Provider>
+        </UiProvider>
     )
 }

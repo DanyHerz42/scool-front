@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { UiContext } from '../../context/uiContext';
 import { types } from '../../types/types';
 
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+// import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ClearIcon from '@material-ui/icons/Clear';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import ChatIcon from '@material-ui/icons/Chat';
@@ -26,7 +27,7 @@ export const MenuShort = () => {
     return (
         <div className="menu-short__container">
             <div className="menu-short__icon" onClick={handleMenuComplete}>
-                <ArrowForwardIosIcon />
+                <ClearIcon />
             </div>
 
             <nav className="menu-short__nav">
