@@ -2,56 +2,72 @@
     // border: 1px solid black;
     grid-area: 2 / 3 / 6 / 5;
     // background-color: #F5F7F9;
-    background-color: #E2DDDD;
-    display: flex;
+    background-color: #efefef;
+    // display: flex;
     // background-color: white;
     // justify-content: center;
     // align-items: center;
 
-    img {
-        height: 500px;
-    }
+    // img {
+    //     height: 500px;
+    // }
 }
+
+.container-classes {
+    width: 100%; 
+    height: 85%;
+    overflow-y: auto;
+}
+// **** Head of Info ****//
+
+.head-info {
+    width: 100%;
+    height: 15%;
+    background-color: blue;
+}
+
 
 
 //******Carpeta*****//
 
 .carpeta {
-    width: 200px;
-    height: 200px;
-    border: 1px solid black;
+    width: 285px;
+    height: 220px;
+    margin: auto;
 }
 
-.back > .rectan-small {
-    margin-top: 5px;
-    margin-left: 20px;
-
-    width: 40px;
-    height: 40px;
-    background-color: #f0ad4e;
+.container-class {
     display: inline-block;
-}
-.back > .triangulo {
-    margin-top: 5px;
-
-    width: 0;
-    height: 0;
-    border-right: 20px solid transparent;
-    border-top: 20px solid transparent;
-    border-left: 20px solid #f0ad4e;
-    border-bottom: 20px solid #f0ad4e;
-    display: inline-block;
-}
-.back > .rectan-big {
-
-    margin-left: 20px;
-
-    width: 120px;
-    height: 50px;
-    background-color: #f0ad4e;
-    display: flex;
+    padding: 1%;
+    margin: 1% ;
+    width: 21%;
+    min-width: 280px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 7px 7px 15px #b9b9b9; 
 }
 
-.icon--plus > path{
-    stroke-linejoin: round;
+.fotoPerfil-profe {
+    width: 55px;
+    height: 55px;
+    position: relative;
+    left: 200px;
+    bottom: 100px;
+    border-radius: 30px;
 }
+
+.container-class-body p{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.name-class {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.icon--plus {
+    margin: auto;
+    height: 250px;
+}
+
