@@ -11,14 +11,13 @@ export const ClassStudent = (props) => {
             <div className="container-class-head">
                 <div className="carpeta">
                     <svg className="icon--plus">
-                        <polygon fill={datacard.color_class} stroke="" stroke-width="4px" 
+                        <polygon fill={datacard.color_class}
                             points="40 85, 40 30, 70 30, 90 45, 240 45, 240 85" />
-                        <polygon fill="#A9D9FF" stroke="" stroke-width="4px" 
+                        <polygon fill="#A9D9FF"
                             points="53 78, 190 25, 228 78" />
-                        <polygon fill="#09AD2A" stroke="" stroke-width="4px"
+                        <polygon fill="#09AD2A"
                             points="38 185, 25 65, 257 65, 242 185" />
-                        <text className="nameProfe" x="60" y="125" font-family="Verdana"
-                            font-size="20" fill="white">
+                        <text className="nameProfe" x="60" y="125" fill="white">
                             Prof. {datacard.name_teacher}
                         </text>
                     </svg>
