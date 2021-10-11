@@ -1,0 +1,83 @@
+.profile__container {
+    background-color: white;  
+    height: 90%;
+    width: 50%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile__img-container {
+    height: 200px;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: #FF4E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    justify-content: center;
+    // align-items: flex-end;
+}
+.profile__logoBackground {
+    background-color: white;
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+    margin-top: 120px;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.profile__logoProfile {
+    height: 90px;
+    width: 100px;
+    
+}
+
+.profile__name {
+    margin-top: 60px;
+    font-weight: bold;
+}
+.profile__scool {
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 50px;
+
+    p {
+        margin-top: 10px;
+    }
+}
+.profile__biography {
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-left: 50px;
+
+    p {
+        margin-top: 10px;
+    }
+}
+
+.profile__button {
+    button {
+        margin-top: 20px;
+        background-color: $naranja;
+        width: 150px;
+        height: 40px;
+        outline: none;
+        border: none;
+        border-radius: 28px;
+        color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+
+        &:hover {
+        border: 2px solid white;
+        }
+    }
+}

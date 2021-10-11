@@ -37,7 +37,6 @@ export const HomeScreen = () => {
                 menu.menuOpen ? <Menu /> : <MenuShort />
             }
             <Header title="Mis clases"/>
-            {/* <div className="chat__container">Chat</div> */}
             <Chat />
             <div className="container-info">
                 <div className="head-info">

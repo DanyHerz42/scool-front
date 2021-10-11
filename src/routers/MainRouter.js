@@ -6,7 +6,9 @@ import {
 import { CalendarScreen } from '../components/CalendarScreen';
 import { ChatScreen } from '../components/ChatScreen';
 import { HomeScreen } from '../components/HomeScreen';
+import { ProfileScreen } from '../pages/Profile/ProfileScreen';
 import {UiProvider } from '../context/uiContext';
+import { ProfileEditScreen } from '../pages/Profile/ProfileEditScreen';
 
 
 export const MainRouter = () => {
@@ -22,6 +24,8 @@ export const MainRouter = () => {
                     <Route exact path="/goals" />
                     <Route exact path="/autodidact" />
                     <Route exact path="/homeworks" />
+                    <Route exact path="/profile" component={ProfileScreen} />
+                    <Route exact path="/profile/edit" component={ProfileEditScreen} />
 
                 </Switch>
             </div>
