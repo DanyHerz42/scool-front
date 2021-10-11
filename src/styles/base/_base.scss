@@ -23,3 +23,38 @@ html, body {
     grid-template-columns:75px 70px 1fr 1fr;
     grid-template-rows: 5% repeat(4, 1fr);
 }
+
+.container-loadingApp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    img {
+        height: 100px;
+        margin-bottom: 30px;
+    }
+}
+
+.container-loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner {
+
+    animation: spin 1s linear infinite;
+    height: 100px;
+    margin-bottom: 20px;
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

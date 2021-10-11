@@ -29,9 +29,25 @@
 }
 
 .header__container-imgs {
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    .header__profile-active {
+        color: #FF4E50;  /* fallback for old browsers */
+        color: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
+        color: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    a {
+        color: black;
+    }
     svg {
+        cursor: pointer;
         font-size: 2em;
         margin-left: 10px;
+    }
+
+    span {
+        font-size: 1.5em;
+        margin-left: 10px;
+        color: #707070;
     }
 }
