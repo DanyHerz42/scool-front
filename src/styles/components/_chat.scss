@@ -8,6 +8,11 @@
     overflow-y: scroll;
     overflow-x: hidden;
 
+    .chat__icon-msg {
+        color: $naranja;
+        font-size: 40px;
+    }
+
     svg {
         font-size: 60px;
         cursor: pointer;
@@ -27,3 +32,4 @@
         border-radius: 4px;
     }
 }
+

@@ -3,11 +3,12 @@ import { UiContext } from '../context/uiContext'
 import { Menu } from './ui/Menu'
 import { MenuShort } from './ui/MenuShort';
 import { Header } from './ui/Header';
-import { Chat } from './ui/Chat';
+
 
 import { ClassStudent } from './info/ClassStudent';
 import { SearchOfClass } from './info/SearchOfClass';
 import { EnrollClass } from './info/EnrollClass'
+import { Chat } from './ui/chat/Chat';
 
 export const HomeScreen = () => {
     const {menu} = useContext(UiContext);

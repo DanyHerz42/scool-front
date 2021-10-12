@@ -1,0 +1,63 @@
+.calendar__container-card {
+    height: 90%;
+    width: 25%;
+    // width: 500px;
+    // background-color: red;
+    // border-radius: 20px;
+    // padding: 50px;
+    
+}
+
+.calendar__header-card {
+    background: #FF4E50;  
+    background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  
+    background: linear-gradient(to right, #F9D423, #FF4E50);
+    height: 30%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    .calendar_header-day, .calendar_header-date {
+        font-size: 3em;
+    }
+    .calendar_header-number {
+        font-size: 4em;
+    }
+    
+    
+}
+
+.calendar__info-card{
+    background-color: white;
+    height: 65%;
+    // margin-top: 5px;
+    padding-top: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    p {
+        padding-bottom: 10px;
+    }
+
+
+    .calendar__info-toDo {
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .calendar__info-acts {
+        padding: 0px 20px;
+    }
+    .calendar__info-subtitule {
+        font-weight: bold;
+        padding-bottom: 10px;
+        
+    }
+}

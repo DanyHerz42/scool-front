@@ -1,28 +1,27 @@
-import React, { useContext} from 'react'
+
+import React, { useContext } from 'react'
 import { Chat } from '../../components/ui/chat/Chat';
 import { Header } from '../../components/ui/Header';
+import { HomeworkStudent } from '../../components/ui/homework/HomeworkStudent';
 import { Menu } from '../../components/ui/Menu';
 import { MenuShort } from '../../components/ui/MenuShort';
-import { CreateProfile } from '../../components/ui/profile/CreateProfile';
-// import { EditProfile } from '../../components/ui/profile/EditProfile';
 import { UiContext } from '../../context/uiContext';
 
+export const HomeworkScreen = () => {
 
-export const ProfileEditScreen = ({history}) => {
-    
     const {menu} = useContext(UiContext);
- 
+
     return (
         <div  className={menu.menuOpen ? 'container-main-complete' : 'container-main-short'}>
            
             {
                 menu.menuOpen ? <Menu /> : <MenuShort />
             }
-            <Header title="Mis clases"/>
+            <Header title="Actividades"/>
             <Chat />
-            <div className="container-profile">
+            <div className="container-homework">
                 {/* <EditProfile history={history} /> */}
-                <CreateProfile history={history} />
+                <HomeworkStudent />
             </div>
         </div>
     )
