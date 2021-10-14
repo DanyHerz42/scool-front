@@ -14,6 +14,7 @@ export const HomeScreen = () => {
 
     const apiInfo= [
         {
+            "id": "1",
             "name_class": "Matemáticas",
             "color_class": "#09AD2A",
             "Profile_picture": "../../assets/profilePicture/foto1.jpg",
@@ -21,6 +22,7 @@ export const HomeScreen = () => {
             "name_teacher": "Roberto"
         },
         {
+            "id": "2",
             "name_class": "Español",
             "color_class": "#08DD4A",
             "Profile_picture": "../../assets/profilePicture/foto1.jpg",
@@ -29,6 +31,7 @@ export const HomeScreen = () => {
         }
         ,
         {
+            "id": "3",
             "name_class": "Estructura de datos",
             "color_class": "#07CD4A",
             "Profile_picture": "../../assets/profilePicture/foto1.jpg",
@@ -36,6 +39,7 @@ export const HomeScreen = () => {
             "name_teacher": "Roberto"
         },
         {
+            "id": "4",
             "name_class": "Metodologías Agiles",
             "color_class": "#16AE4A",
             "Profile_picture": "../../assets/profilePicture/foto1.jpg",
@@ -63,7 +67,7 @@ export const HomeScreen = () => {
                     {dataCardsClassInfo.map((datacard) => (
                             <ClassStudent
                                 datacard={datacard}
-                                key={datacard.name_class}
+                                key={datacard.id}
                             />
                         ))}
                 </div>

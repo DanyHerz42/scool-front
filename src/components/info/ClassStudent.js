@@ -1,4 +1,8 @@
 import React from 'react'
+// import { Redirect } from 'react-router';
+import { useHistory } from 'react-router-dom';
+
+
 
 // import foto from '../../assets/profilePicture/foto1.jpg'
 
@@ -6,12 +10,23 @@ export const ClassStudent = (props) => {
 
     const { key, datacard } = props;
 
-    const openView = () => {
-        // console.log("hola");
+    const History = useHistory();
+
+    const openClass = () => {
+        // History.push("/detallesDeClase")
+
+        History.push({
+            pathname: '/sign-detallesDeClase',
+            state: {
+                key,
+                datacard
+            },
+        });
     }
 
+
     return (
-        <div className="container-class" key={key} onSubmit={openView()}>
+        <div className="container-class" key={key} onClick={ ()=>openClass() }>
             <div className="container-class-head">
                 <div className="carpeta">
                     <svg className="icon--plus">
