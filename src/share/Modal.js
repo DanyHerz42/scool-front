@@ -1,12 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Portal from '../Portal'
 
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
-export default class Modal extends Component {
-    render() {
-
-        const { children, toggle, active} = this.props;
+export const Modal = ({ children, toggle, active} ) => {
+        // const { children, toggle, active} = this.props;
 
         return (
             <Portal>
@@ -26,5 +24,4 @@ export default class Modal extends Component {
                 )}
             </Portal>
         )
-    }
 }

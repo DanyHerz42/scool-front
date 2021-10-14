@@ -2,8 +2,6 @@ import React from 'react'
 // import { Redirect } from 'react-router';
 import { useHistory } from 'react-router-dom';
 
-
-
 // import foto from '../../assets/profilePicture/foto1.jpg'
 
 export const ClassStudent = (props) => {
@@ -16,7 +14,7 @@ export const ClassStudent = (props) => {
         // History.push("/detallesDeClase")
 
         History.push({
-            pathname: '/sign-detallesDeClase',
+            pathname: '/detallesDeClase',
             state: {
                 key,
                 datacard
@@ -40,8 +38,8 @@ export const ClassStudent = (props) => {
                             Prof. {datacard.name_teacher}
                         </text>
                     </svg>
-                    < img className="fotoPerfil-profe"
-                    src={datacard.Profile_picture} alt="fotoPerfil"/>
+                    {/* < img className="fotoPerfil-profe"
+                    src={datacard.Profile_picture} alt="fotoPerfil"/> */}
                 </div>
             </div>
             <div className="container-class-body">

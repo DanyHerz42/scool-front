@@ -1,54 +1,46 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { UiContext } from '../context/uiContext'
 import { Menu } from './ui/Menu'
 import { MenuShort } from './ui/MenuShort';
 import { Header } from './ui/Header';
 import { Chat } from './ui/Chat';
 
+import { AuthContext } from '../context/authContext';
+import { getClassesStudent } from '../services/class'
+
 import { ClassStudent } from './info/ClassStudent';
 import { SearchOfClass } from './info/SearchOfClass';
-import { EnrollClass } from './info/EnrollClass'
+import { EnrollClass } from './info/EnrollClass';
+
 
 export const HomeScreen = () => {
     const {menu} = useContext(UiContext);
 
-    const apiInfo= [
-        {
-            "id": "1",
-            "name_class": "Matemáticas",
-            "color_class": "#09AD2A",
-            "Profile_picture": "../../assets/profilePicture/foto1.jpg",
-            "next_class": "2004-07-16T05:00:00.000Z",
-            "name_teacher": "Roberto"
-        },
-        {
-            "id": "2",
-            "name_class": "Español",
-            "color_class": "#08DD4A",
-            "Profile_picture": "../../assets/profilePicture/foto1.jpg",
-            "next_class": "2004-07-16T05:00:00.000Z",
-            "name_teacher": "Roberto"
-        }
-        ,
-        {
-            "id": "3",
-            "name_class": "Estructura de datos",
-            "color_class": "#07CD4A",
-            "Profile_picture": "../../assets/profilePicture/foto1.jpg",
-            "next_class": "2004-07-16T05:00:00.000Z",
-            "name_teacher": "Roberto"
-        },
-        {
-            "id": "4",
-            "name_class": "Metodologías Agiles",
-            "color_class": "#16AE4A",
-            "Profile_picture": "../../assets/profilePicture/foto1.jpg",
-            "next_class": "2004-07-16T05:00:00.000Z",
-            "name_teacher": "Roberto"
-        }
-    ];
+    const { user } = useContext(AuthContext);
 
-    const [dataCardsClassInfo, setdataCardsClassInfo] = useState(apiInfo);
+    const [classes, setClasses] = useState(
+        {
+            loading: true,
+            classes: []
+        }
+    );
+
+    const getClasses = async () => {
+        const { classes } = await getClassesStudent();
+        // console.log(classes);
+        setClasses({
+            classes: classes
+
+        })
+        
+    }
+
+    useEffect(() => {
+        getClasses();
+        return () => {
+            setClasses({});
+        };
+    }, [])
 
     return (
         <div  className={menu.menuOpen ? 'container-main-complete' : 'container-main-short'}>
@@ -63,12 +55,13 @@ export const HomeScreen = () => {
                     <SearchOfClass/>
                 </div>
                 <div className="container-classes">
-                    {dataCardsClassInfo.map((datacard) => (
-                            <ClassStudent
-                                datacard={datacard}
-                                key={datacard.id}
-                            />
-                        ))}
+                    {classes.classes.map((datacard) => (
+                        // console.log(datacard)
+                        <ClassStudent
+                            datacard={datacard}
+                            // key={datacard.id}
+                        />
+                    ))}
                 </div>
             </div>
         </div>

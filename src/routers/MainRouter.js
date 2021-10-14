@@ -10,7 +10,9 @@ import { ProfileScreen } from '../pages/Profile/ProfileScreen';
 import {UiProvider } from '../context/uiContext';
 import { ProfileEditScreen } from '../pages/Profile/ProfileEditScreen';
 
-import Class from '../components/info/Class/ClassInfo'
+import { Class } from '../components/info/Class/ClassInfo'
+// import Class from '../components/info/Class/ClassInfo'
+
 
 export const MainRouter = () => {
 
