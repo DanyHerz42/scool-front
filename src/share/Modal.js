@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Portal from '../Portal'
 
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+
 export default class Modal extends Component {
     render() {
 
@@ -11,9 +13,12 @@ export default class Modal extends Component {
                 {active && (
                     <div className="wrapper">
                         <div className="window">
-                            <button className="closeBtn"
-                                onClick={toggle}
-                            >X</button>
+                            <button className="closeBtn" onClick={toggle}>
+                                <HighlightOffIcon
+                                    color="secondary"
+                                    fontSize="large"
+                                />
+                            </button>
                             <div>{children}</div>
                         </div>
                         <div onClick={toggle} className="backgroundModal"/>

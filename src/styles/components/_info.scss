@@ -43,12 +43,10 @@
     font-size: 22px;
     background-color: #ffffff;
     margin: 1rem; 
+    &:hover {
+        background-color: #e4e4e4 ;
+    }
 }
-
-.new_class:hover {
-    background-color: #e4e4e4 ;
-}
-
 
 // ***** Buscador ********/
 .search_class {
@@ -63,32 +61,34 @@
     border-radius: 15px 0 0 15px;
     font-size: 24px;
     padding: 10px;
+    &::placeholder {
+        color: #5c5c5c;
+        font-size: 24px;
+        text-align: center;
+    }
 }
-.search_class::placeholder {
-    color: #5c5c5c;
-    font-size: 24px;
-    text-align: center;
-}
+
 .btn_search {
     border-radius: 0 15px 15px 0;
     height: 55px;
     background-color: #e4e4e4;
     border: transparent;
     padding: 6px 10px 10px 10px;
+    &:hover {
+        background-color: #ffaf6e;
+    }
+    &:active {
+        background-color: #fc9139;
+    }
 }
-.btn_search:hover {
-    background-color: #ffaf6e;
-}
-.btn_search:active {
-    background-color: #fc9139;
-}
+
 .alerta {
     color: #ff0000;
 }
 .errorSearch {
-    position: relative;
-    top: -18px;
-    left: 22px;
+    position: fixed;
+    top: 130px;
+    right: 24%;
 }
 
 //******Carpeta*****//
@@ -138,3 +138,71 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
+
+// ****** code for enroll a class ****//
+.text_center_modal {
+    // width: 100%;
+    margin: 2%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Roboto', sans-serif;
+}
+.input_Modal {
+    width: 89%;
+    height: 35px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 3%;
+    border-radius: 15px;
+    border: none;
+    background-color: #e4e4e4;
+    font-size: 18px;
+    outline: none;
+    &::placeholder {
+        color: #5c5c5c;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+.btnAcept_modal {
+    width: 50%;
+    height: 55px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 23%;
+    border: none;
+    border-radius: 15px;
+    background-color: #fd8726;
+    font-size: 20px;
+    color: #ffffff;
+    &:active {
+        background-color: #ff9742;
+    }
+}
+.errorCodeClass {
+    margin-left: 4%;
+}
+
+.displayFlexAround {
+    display: flex;
+    justify-content: space-around;
+
+    .imgProfile {
+        width: 45px;
+        height: 45px;
+        position: relative;
+        border-radius: 30px;
+        margin-left: 15px;
+    }
+}
+
+.largeText {
+    font-size: 22px;
+    font-weight: normal;
+    word-spacing: 3px;
+}
+
+
+

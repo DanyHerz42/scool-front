@@ -14,15 +14,30 @@ export const HomeScreen = () => {
 
     const apiInfo= [
         {
-            "name_class": "Matematicas",
+            "name_class": "Matemáticas",
             "color_class": "#09AD2A",
             "Profile_picture": "../../assets/profilePicture/foto1.jpg",
             "next_class": "2004-07-16T05:00:00.000Z",
             "name_teacher": "Roberto"
         },
         {
-            "name_class": "Matematicas2",
-            "color_class": "#09AD2A",
+            "name_class": "Español",
+            "color_class": "#08DD4A",
+            "Profile_picture": "../../assets/profilePicture/foto1.jpg",
+            "next_class": "2004-07-16T05:00:00.000Z",
+            "name_teacher": "Roberto"
+        }
+        ,
+        {
+            "name_class": "Estructura de datos",
+            "color_class": "#07CD4A",
+            "Profile_picture": "../../assets/profilePicture/foto1.jpg",
+            "next_class": "2004-07-16T05:00:00.000Z",
+            "name_teacher": "Roberto"
+        },
+        {
+            "name_class": "Metodologías Agiles",
+            "color_class": "#16AE4A",
             "Profile_picture": "../../assets/profilePicture/foto1.jpg",
             "next_class": "2004-07-16T05:00:00.000Z",
             "name_teacher": "Roberto"

@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 // import { useForm } from "react-hook-form";
+
 import Modal from '../../share/Modal';
-// import { SearchOfClass } from './SearchOfClass'
+import { ModalCode } from './ModalCode' 
+import { ModalCodeSuccess } from './ModalCodeSuccess';
 
 export const EnrollClass = () => {
     const [active, setActive] = useState(false);
@@ -15,8 +17,8 @@ export const EnrollClass = () => {
             <button className="new_class" onClick={toggle}
             >Nueva Clase</button>
             <Modal active={active} toggle={toggle}>
-                <h1>Modal Works!</h1>
-                {/* <SearchOfClass></SearchOfClass> */}
+                {/* <ModalCode /> */}
+                <ModalCodeSuccess />
             </Modal>
         </div>
         
