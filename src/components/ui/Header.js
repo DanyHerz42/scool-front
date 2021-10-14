@@ -42,10 +42,9 @@ export const Header = ({title}) => {
                
                 <NotificationsNoneIcon />
                 <NavLink activeClassName="header__profile-active" to="/profile">
-                {/* <AccountCircleIcon /> */}
-                    {imgProfile != '' ? (
+                    {imgProfile !== '' ? (
                         <div className="header__profile-container-img">
-                            <img className="header__profile-img" src={`/profile/${imgProfile}`} />
+                            <img className="header__profile-img" src={`/profile/${imgProfile}`} alt="img profile" />
                         </div>
                     )
                         :

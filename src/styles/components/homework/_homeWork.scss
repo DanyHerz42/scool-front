@@ -10,3 +10,35 @@
     text-align: center;
     margin-bottom: 20px;
 }
+
+.homework__pending-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 100px;
+    img {
+        margin-right: 10px;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.homework__info-container {
+    display: flex;
+    align-items: center;
+}
+.homework__button {
+    background-color: $naranja;
+    width: 150px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 28px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+
+    &:hover {
+        border: 2px solid white;
+    }
+}
