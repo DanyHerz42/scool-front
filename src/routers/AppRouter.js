@@ -13,6 +13,7 @@ import { MainRouter } from './MainRouter';
 import jwt_decode from 'jwt-decode';
 import { PublicRoute } from './PublicRouter';
 import { PrivateRoute } from './PrivateRouter';
+import { LoadingApp } from '../components/ui/LoadingApp';
 
 export const AppRouter = () => {
 
@@ -46,7 +47,7 @@ export const AppRouter = () => {
     const checkingFinish = () => ({ type: types.authCheckingFinish });
     
     if(user.checking) {
-        return (<h5>Espere...</h5>)
+        return <LoadingApp />
     }
     
 

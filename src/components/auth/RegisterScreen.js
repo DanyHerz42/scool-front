@@ -37,7 +37,8 @@ export const RegisterScreen = ({ history }) => {
                 localStorage.setItem('token', registerData.token);
                
                
-                const { id_user, name_user } = jwt_decode(registerData.token).newUser[0];
+                const { id_user, name_user } = jwt_decode(registerData.token).userFound[0];
+               
                 dispatch(login({
                     id: id_user,
                     name: name_user,
