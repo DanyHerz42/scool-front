@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
 import { postEnrrollClass } from '../../services/class';
+import Swal from 'sweetalert2';
 
 import { ModalCodeSuccess } from './ModalCodeSuccess'
 
@@ -9,14 +10,17 @@ export const ModalCode = ({openSuccessClass}) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     // const onSubmit = data => console.log(data);
-    const onSubmit = async () => {
+    const onSubmit = async (codeClass) => {
         // console.log(codeClass.codeClass);
 
-        const data = await postEnrrollClass()
-        console.log(data);
+        const {message} = await postEnrrollClass(codeClass.codeClass)
+        // console.log(data);
+        if (message === 'Alumno registrado exitosamente') {
+            openSuccessClass()
+        } else {
+            Swal.fire('Error', 'No exite la clase', 'error');
+        }
 
-        openSuccessClass()
-        
         // <h1>hola</h1>
         // <ModalCodeSuccess></ModalCodeSuccess>
         

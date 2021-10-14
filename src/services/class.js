@@ -12,10 +12,10 @@ export const getClassesStudent = async() => {
     }
 }
 
-export const postEnrrollClass = async(unique_identifier='xuQNWIy') => {
-    const resp = await fetchWithToken('students/register-in-class',unique_identifier,'POST');
+export const postEnrrollClass = async(unique_identifier) => {
+    const resp = await fetchWithToken('students/register-in-class',{unique_identifier},'POST');
     const body = await resp.json();
-    console.log(body);
+    // console.log(body);
     if(resp.status === 200) {
         return body;
     } else {
