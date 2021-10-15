@@ -81,3 +81,11 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+
+.container-goal {
+    grid-area: 2 / 3 / 6 / 5;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

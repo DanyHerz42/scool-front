@@ -12,6 +12,7 @@ import { ProfileEditScreen } from '../pages/Profile/ProfileEditScreen';
 import { ChatScreen } from '../pages/Chat/ChatScreen';
 import { CalendarScreen } from '../pages/Calendar/CalendarScreen';
 import { HomeworkScreen } from '../pages/Homework/HomeworkScreen';
+import { Goal } from '../pages/Goal/Goal';
 
 
 export const MainRouter = () => {
@@ -24,7 +25,7 @@ export const MainRouter = () => {
                     <Route exact path="/" component={HomeScreen} />
                     <Route exact path="/calendar" component={CalendarScreen} />
                     <Route exact path="/chat" component={ChatScreen} />
-                    <Route exact path="/goals" />
+                    <Route exact path="/goals" component={Goal}/>
                     <Route exact path="/autodidact" />
                     <Route exact path="/homeworks" component={HomeworkScreen} />
                     <Route exact path="/profile" component={ProfileScreen} />
