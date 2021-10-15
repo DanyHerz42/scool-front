@@ -32,7 +32,7 @@ export const Integrants = () => {
         }
     ];
 
-    const [dataCardsIntegrants, setDataCardsIntegrants] = useState(apiIntegrants)
+    // const [dataCardsIntegrants, setDataCardsIntegrants] = useState(apiIntegrants)
 
     return (
         <>
@@ -40,22 +40,29 @@ export const Integrants = () => {
                 <p className="title_sectionClass">Integrantes</p>
             </div>
             <div className="containerIntegrants">
-                <div className="Subtitle_Integrants">
-                    <p>Profesor</p>
-                </div>
-                <div className="containerIntegrant">
-                    <img className="picIntegrant" src={profilePrfe} alt="fotoProfe"/>
-                    <p className="name_integrant">Josep Guardiola</p>
-                    <hr className="dividorIntegrants"/>
-                </div>
-                <div className="Subtitle_Integrants">
-                    <p>Alumnos</p>
-                </div>
-                {dataCardsIntegrants.alumnos.map((datacard) => (
+                <div className="SubcontainerIntegrants">
+                    <div className="Subtitle_Integrants">
+                        <p>Profesor</p>
+                    </div>
+                    <div className="containerIntegrant">
+                        <div className="containerFlex">
+                            <img className="picIntegrant" src={profilePrfe} alt="fotoProfe"/>
+                            <div className="containerFlexJustCenter">
+                                <p className="name_integrant">Josep Guardiola</p>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div>
+                    <div className="Subtitle_Integrants">
+                        <p>Alumnos</p>
+                    </div>
+                    {/* {dataCardsIntegrants.alumnos.map((datacard) => ( */}
                     <IntegrantsStudent
-                        datacard={datacard.alumno}
+                        // datacard={datacard.alumno}
                     />
-                ))}
+                    {/* ))} */}
+                </div>
+                
             </div>
             
         </>
