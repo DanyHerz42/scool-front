@@ -339,6 +339,30 @@
     color: #ffffff;
 }
 
+.containerActCompleta{
+    width: 90%;
+    height: 80%;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 6px 8px 8px #b9b9b9;
+    font-size: 22px;
+    font-weight: 300;
+    word-spacing: 4px;
+    .docContainer {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // background-color: rgb(85, 165, 165);
+        .imgPdf {
+            margin-right: 5px;
+            width: 70px;
+            height: 80px;
+        }
+    }
+}
+
 
 //********** Integrants **********//
 
@@ -346,5 +370,25 @@
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    background-color: #b13e3e;
+    background-color: #cecece;
+    .Subtitle_Integrants {
+        margin-left: 4%;
+    }
+    .containerIntegrant {
+        .picIntegrant {
+            width: 60px;
+            height: 60px;
+            margin-left: 5%;
+        }
+        .name_integrant {
+            font-size: 24px;
+            font-weight: 300;
+            word-spacing: 4px;
+            text-align: center;
+        }
+        .dividorIntegrants {
+            margin: 0 8% 0 8%;
+        }
+    }
+
 }
