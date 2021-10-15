@@ -10,7 +10,7 @@ import { completeProfile, getOrgs } from '../../../services/profile';
 
 export const CreateProfile = ({history}) => {
 
-    const { user } = useContext(AuthContext);
+    const { user} = useContext(AuthContext);
 
     const [values, setValues] = useState({
         imgProfile: '',

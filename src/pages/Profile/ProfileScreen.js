@@ -2,13 +2,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../context/authContext';
 import { UiContext } from '../../context/uiContext';
 import { getProfileData } from '../../services/profile';
-import { Chat } from '../../components/ui/Chat';
 import { Header } from '../../components/ui/Header';
 import { Menu } from '../../components/ui/Menu';
 import { MenuShort } from '../../components/ui/MenuShort';
 import { MessageProfile } from '../../components/ui/profile/MessageProfile';
 import { Profile } from '../../components/ui/profile/Profile';
 import { Loading } from '../../components/ui/Loading';
+import { Chat } from '../../components/ui/chat/Chat';
 
 export const ProfileScreen = ({history}) => {
     const {menu} = useContext(UiContext);

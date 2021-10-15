@@ -1,0 +1,23 @@
+.calendar__container-calendar{
+    height: 80%;
+    // width: 500px;
+    width: 65%;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    // padding: 50px;
+    
+}
+
+.rbc-agenda-empty {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+    img {
+        height: 200px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+}

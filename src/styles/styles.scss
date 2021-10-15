@@ -6,9 +6,16 @@
 
 @import './components/login';
 @import './components/register';
+
+
 @import './components/profile/profileMessage';
 @import './components/profile/profile';
 @import './components/profile/profileEdit';
+
+@import './components/calendar/calendar';
+@import './components/calendar/calendarCard';
+
+@import './components/homework/homeWork';
 
 
 @import './components/menu';
