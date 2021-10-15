@@ -4,8 +4,7 @@ import { Menu } from './ui/Menu'
 import { MenuShort } from './ui/MenuShort';
 import { Header } from './ui/Header';
 
-
-import { AuthContext } from '../context/authContext';
+// import { AuthContext } from '../context/authContext';
 import { getClassesStudent } from '../services/class'
 
 import { ClassStudent } from './info/ClassStudent';
@@ -15,8 +14,7 @@ import { Chat } from './ui/chat/Chat';
 
 export const HomeScreen = () => {
     const {menu} = useContext(UiContext);
-
-    const { user } = useContext(AuthContext);
+    // const { user } = useContext(AuthContext);
 
     const [classes, setClasses] = useState(
         {
@@ -32,15 +30,14 @@ export const HomeScreen = () => {
             classes: classes
 
         })
-        
-    }
+    };
 
     useEffect(() => {
         getClasses();
         return () => {
             setClasses({});
         };
-    }, [])
+    }, []);
 
     return (
         <div  className={menu.menuOpen ? 'container-main-complete' : 'container-main-short'}>
@@ -59,7 +56,7 @@ export const HomeScreen = () => {
                         // console.log(datacard)
                         <ClassStudent
                             datacard={datacard}
-                            // key={datacard.id}
+                            key={datacard.id_class}
                         />
                     ))}
                 </div>

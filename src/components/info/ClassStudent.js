@@ -16,7 +16,7 @@ export const ClassStudent = (props) => {
         History.push({
             pathname: '/detallesDeClase',
             state: {
-                key,
+                // key,
                 datacard
             },
         });
@@ -28,14 +28,14 @@ export const ClassStudent = (props) => {
             <div className="container-class-head">
                 <div className="carpeta">
                     <svg className="icon--plus">
-                        <polygon fill={datacard.color_class}
+                        <polygon fill={datacard.color}
                             points="40 85, 40 30, 70 30, 90 45, 240 45, 240 85" />
                         <polygon fill="#A9D9FF"
                             points="53 78, 190 25, 228 78" />
-                        <polygon fill={datacard.color_class}
+                        <polygon fill={datacard.color}
                             points="38 185, 25 65, 257 65, 242 185" />
                         <text className="nameProfe" x="60" y="125" fill="white">
-                            Prof. {datacard.name_teacher}
+                            Prof. {datacard.teacher_username}
                         </text>
                     </svg>
                     {/* < img className="fotoPerfil-profe"
@@ -43,7 +43,7 @@ export const ClassStudent = (props) => {
                 </div>
             </div>
             <div className="container-class-body">
-                <p className="name-class">{datacard.name_class}</p>
+                <p className="name-class">{datacard.name}</p>
                 <p>Próxima clase:</p>
                 <p className="nextClass">{datacard.next_class}</p>
             </div>
