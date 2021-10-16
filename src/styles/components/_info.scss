@@ -257,12 +257,31 @@
     margin: 0 13% 0 13%;
 }
 .BodyMenu_sideLeft{
-    
-}
+    margin-top: 5%;
+    margin-left: 10%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-.activeBtn{
-    font-weight: bold;
-    color: #28923a;
+    a {
+        background-color: #d1d1d1;
+        min-width: 176px;
+        height: 50px;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        border-radius: 20px 0 0 20px;
+        text-align: center;
+        font-size: 24px;
+        padding-top: 20px;
+        color: #000000;
+    }
+    .activeBtn{
+        font-weight: bold;
+        background-color: #8b8b8b;
+        color: #ffffff;
+    }
 }
 
 .head_containerInfoOFClass {
