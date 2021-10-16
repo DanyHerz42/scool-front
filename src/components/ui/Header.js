@@ -25,6 +25,9 @@ export const Header = ({title}) => {
 
     useEffect(() => {
         getImgProfile();
+        return () => {
+            setImageProfile({}); 
+          };
     }, [])
 
     return (
