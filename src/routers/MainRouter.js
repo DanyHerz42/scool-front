@@ -4,8 +4,7 @@ import {
     Route,
 } from "react-router-dom";
 
-
-import { HomeScreen } from '../components/HomeScreen';
+import { HomeScreenPage } from '../pages/Classes/HomeScreen';
 import { ProfileScreen } from '../pages/Profile/ProfileScreen';
 import {UiProvider } from '../context/uiContext';
 import { ProfileEditScreen } from '../pages/Profile/ProfileEditScreen';
@@ -13,9 +12,11 @@ import { ChatScreen } from '../pages/Chat/ChatScreen';
 import { CalendarScreen } from '../pages/Calendar/CalendarScreen';
 import { HomeworkScreen } from '../pages/Homework/HomeworkScreen';
 
-import { Class } from '../components/info/Class/ClassInfo'
-// import Class from '../components/info/Class/ClassInfo'
-
+// import { Class } from '../components/info/Class/ClassInfo'
+// import { WorkFlow } from '../components/info/Class/workFlow';
+import { WorkFlowPage } from '../pages/Classes/WorkFlowPage';
+import { IntegrantsPage } from '../pages/Classes/IntegrantsPage';
+import { CalendarPage } from '../pages/Classes/CalendarPage';
 
 export const MainRouter = () => {
 
@@ -23,8 +24,11 @@ export const MainRouter = () => {
         <UiProvider>
             <div>
                 <Switch>
-                    <Route exact path="/" component={HomeScreen} />
-                    <Route exact path="/detallesDeClase" component={Class} />
+                    <Route exact path="/" component={HomeScreenPage} />
+                    <Route exact path="/clase/:key/flujoDeTrabajo" component={WorkFlowPage} />
+                    <Route exact path="/clase/:key/integrantes" component={IntegrantsPage} />
+                    <Route exact path="/clase/:key/calendario" component={CalendarPage} />
+                    {/* <Route exact path="/clase/flujoDeTrabajo" component={WorkFlow} /> */}
                     <Route exact path="/calendar" component={CalendarScreen} />
                     <Route exact path="/chat" component={ChatScreen} />
                     <Route exact path="/goals" />
@@ -32,7 +36,6 @@ export const MainRouter = () => {
                     <Route exact path="/homeworks" component={HomeworkScreen} />
                     <Route exact path="/profile" component={ProfileScreen} />
                     <Route exact path="/profile/edit" component={ProfileEditScreen} />
-
                 </Switch>
             </div>
         </UiProvider>

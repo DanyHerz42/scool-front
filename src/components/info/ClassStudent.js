@@ -5,23 +5,20 @@ import { useHistory } from 'react-router-dom';
 // import foto from '../../assets/profilePicture/foto1.jpg'
 
 export const ClassStudent = (props) => {
-
     const { key, datacard } = props;
-
     const History = useHistory();
 
     const openClass = () => {
         // History.push("/detallesDeClase")
 
         History.push({
-            pathname: '/detallesDeClase',
+            pathname: `/clase/${datacard.id_class}/flujoDeTrabajo`,
             state: {
-                // key,
+                key,
                 datacard
             },
         });
     }
-
 
     return (
         <div className="container-class" key={key} onClick={ ()=>openClass() }>
