@@ -1,0 +1,135 @@
+.chat__container-chatMessages{
+    height: 80%;
+    width: 65%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    @include backgroundScool();
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.chat__container-ContactActive {
+    background-color: white;
+    border-top-right-radius: 30px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 10px;
+    span {
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+}
+
+.chat-container-imgContact {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid $naranja;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.chat__container-write {
+    background-color: white;
+    border-bottom-right-radius: 30px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    input {
+        margin: 10px;
+        width: 90%;
+        height: 70%;
+        border-radius: 10px;
+        padding-left: 5px;
+        border: 1px solid $naranja;
+        
+        &:focus {
+            outline: none;
+            border: 2px solid $naranja;
+
+        }
+    }
+
+    svg {
+        cursor: pointer;
+        color: $naranja;
+        font-size: 2em;
+        
+        &:hover {
+            font-size: 2.5em;
+
+        }
+        
+    }
+}
+
+.chat__container-messages {
+   
+    height: 100%;
+    padding: 10px;
+    // background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    .chat__mesagge-contact {
+        align-self: flex-start;
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 10px 0px;
+
+        display: flex;
+        flex-direction: column;
+        span {
+            font-size: .9em;
+            font-weight: bold;
+            align-self: flex-end;
+        }
+    }
+    .chat__mesagge-me{
+        background-color: rgb(63, 253, 196);
+        align-self: flex-end;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 10px 0px;
+
+        display: flex;
+        flex-direction: column;
+        span {
+
+            font-size: .9em;
+            font-weight: bold;
+
+            align-self: flex-end;
+            
+        }
+    }
+
+    
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        // background: #282c34;
+        background: #ccc;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        // background: #ccc;
+        border-radius: 10px;
+    }
+  
+}

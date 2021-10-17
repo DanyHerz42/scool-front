@@ -4,22 +4,17 @@
     background-color: white;
     border-radius: 30px;
     margin-right: 20px;
-    // padding: 0px 20px;
+
     display: flex;
     flex-direction: column;
-    // align-items: center;
 
-    // box-shadow: 4px 4px 4px 4px rgb(235, 149, 149);
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.2);
 
-    
 
     .goal__status-container {
          border-top-left-radius: 30px;
         border-top-right-radius: 30px;
-        background: #FF4E50;  
-        background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  
-        background: linear-gradient(to right, #F9D423, #FF4E50); 
+        @include backgroundScool();
         width: 100%;
         height: 40%;
         display: flex;
@@ -46,23 +41,17 @@
         display: flex;
         flex-direction: column;
         height: 60%;
-        // justify-content: center;
+  
         align-items: center;
-        // img {
-        //     height: 300px;
-        //     width: 300px;
-        // }
+      
 
         .goals__status-medals {
             display: flex;
             flex-direction: row;
             padding-top: 50px;
             .goals__status-medals-img {
-
-                // img {
                 height: 300px;
                 width: 300px;
-                // }
             }
             .goals__status-medals-container {
                 display: flex;
@@ -97,8 +86,7 @@
     display: flex;
     flex-direction: column;
     height: 90%;
-    // justify-content: center;
-    // margin-top:  5%;
+ 
 }
 
 /* progreso medallas */
@@ -148,11 +136,6 @@
     box-shadow: 4px 4px 4px 4px rgb(235, 149, 149);
     // justify-content: center;
     align-items: center;
-    // text-align: center;
-//    justify-content: space-around;
-    
-    // flex-wrap: wrap;
-    
 
     .goal__container-imgs-first {
         display: flex;
