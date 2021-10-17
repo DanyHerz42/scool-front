@@ -1,0 +1,81 @@
+.chat__container-card {
+    height: 90%;
+    width: 25%;
+    background-color: white;
+    border-radius: 30px;
+    // background: #FF4E50;  
+    // background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  
+    // background: linear-gradient(to right, #F9D423, #FF4E50);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 2px solid $naranja;
+}
+
+.chat__card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin-top: 20px;
+
+
+    
+    svg {
+        font-size: 4em;
+        cursor: pointer;
+        
+        &:hover {
+            color: $naranja;
+        }
+    }
+}
+.chat__backgorund-imgProfile {
+        height: 230px;
+        width: 230px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        border: 2px solid $naranja;
+    img {
+        height: 160px;
+        width: 160px;
+        
+    }
+}
+
+.chat__card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    span {
+        font-weight: bold;
+    }
+    button {
+        width: 80%;
+        margin-top: 30px;
+        background-color: white;
+        // width: 30%;
+        height: 56px;
+        outline: none;
+        border: none;
+        border-radius: 28px;
+        color: black;
+        font-size: 1.2em;
+        cursor: pointer;
+        border: 1px solid $naranja;
+
+        &:hover {
+            border: 2px solid white;
+            background: #FF4E50;  
+            background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  
+            background: linear-gradient(to right, #F9D423, #FF4E50);
+            color: white;
+        }
+    }
+}
