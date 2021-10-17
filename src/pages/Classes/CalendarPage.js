@@ -6,7 +6,7 @@ import { Header } from '../../components/ui/Header';
 import { Chat } from '../../components/ui/chat/Chat';
 
 import { MenuLeftClass } from '../../components/info/Class/MenuLeftClass';
-import { ClassCalendar } from '../../components/info/Class/ClassCalendar';
+import { ClassCalendar } from '../../components/info/Class/ClassCalenda';
 
 export const CalendarPage = () => {
     const {menu} = useContext(UiContext);
