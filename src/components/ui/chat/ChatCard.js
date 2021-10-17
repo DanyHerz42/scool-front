@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
-import 'animate.css';
+// import 'animate.css';
 const data = [
     {
         id: 1,
