@@ -6,7 +6,7 @@ import { Header } from '../../components/ui/Header';
 import { Chat } from '../../components/ui/chat/Chat';
 
 import { MenuLeftClass } from '../../components/info/Class/MenuLeftClass';
-import { WorkFlow } from '../../components/info/Class/WorkFlo';
+import { WorkFlow } from '../../components/info/Class/WorkFlow';
 
 
 export const WorkFlowPage = () => {
