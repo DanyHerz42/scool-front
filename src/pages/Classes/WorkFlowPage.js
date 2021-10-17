@@ -8,7 +8,6 @@ import { Chat } from '../../components/ui/chat/Chat';
 import { MenuLeftClass } from '../../components/info/Class/MenuLeftClass';
 import { WorkFlow } from '../../components/info/Class/WorkFlow';
 
-
 export const WorkFlowPage = () => {
     const {menu} = useContext(UiContext);
 

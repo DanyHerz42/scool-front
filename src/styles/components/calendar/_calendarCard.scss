@@ -5,13 +5,12 @@
     // background-color: red;
     // border-radius: 20px;
     // padding: 50px;
+
     
 }
 
 .calendar__header-card {
-    background: #FF4E50;  
-    background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  
-    background: linear-gradient(to right, #F9D423, #FF4E50);
+    @include backgroundScool();
     height: 30%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;

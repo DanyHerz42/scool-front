@@ -1,3 +1,10 @@
 //  Colors
 
 $naranja : #EA5A0B;
+
+$backGroundOld: linear-gradient(to right, #F9D423, #FF4E50); 
+
+@mixin backgroundScool() {
+    background: linear-gradient(to top, rgba(255,90,0,.9), #FF4E50);
+}
+    
