@@ -40,10 +40,11 @@ export const Integrants = () => {
         getAllIntegrants();
         return () => {
             setTeacher({});
+            setStudents({});
         };
     }, []);    
-    console.log(teacher);
-    console.log(students);
+    // console.log(teacher);
+    // console.log(students);
 
     return (
         <>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useHistory, useParams } from 'react-router'
 
-import foto1 from '../../../assets/profilePicture/foto1.jpg';
 import { getIntegrantsClass } from '../../../services/class';
 
 export const MenuLeftClass = () => {
@@ -13,15 +12,24 @@ export const MenuLeftClass = () => {
         {
             loading: true,
             classInfo: [],
-            integrants: []
+        }
+    );
+    const [teacher, setTeacher] = useState(
+        {
+            loading: true,
+            teacher: [],
         }
     );
 
     const getInfoOfClass = async () => {
         const { classInfo, integrants } = await getIntegrantsClass(id);
+        const { teacher } = integrants;
+
         setClassInfo({
             classInfo: classInfo,
-            integrants: integrants
+        });
+        setTeacher({
+            teacher: teacher
         });
     }
 
@@ -29,23 +37,11 @@ export const MenuLeftClass = () => {
         getInfoOfClass();
         return () => {
             setClassInfo({});
+            setTeacher({});
         };
     }, []);
-
-    // function prueba( ) {
-    //     classInfo.integrants.map((data) => (
-    //         console.log(data)
-    //     ))
-    // }
-
-    const { students } = classInfo.integrants;
-    // const { students } = students;
-
-    // students.map((data1) => (
-    //     console.log(data1)
-    // ))
-    console.log(students);
-
+    // console.log(classInfo);
+    // console.log(teacher);
 
     return (
         <div className="menu_class">
@@ -67,15 +63,15 @@ export const MenuLeftClass = () => {
                         <p className="titleClass">{data.name}</p>
                     </div>
                 ))}
-                {/* {classInfo.integrants.map((data) => (             */}
+                {teacher.teacher.map((data) => (            
                     <div>
-                        <p className="textMenuLeft">Profesor: Josep guardiola</p>
+                        <p className="textMenuLeft">Profesor: {data.name_user} {data.lastname}</p>
                         <p className="textMenuLeft"></p>
-                        <p className="textMenuLeft">Correo: vrojas2@ucol.mx</p>
+                        <p className="textMenuLeft">Correo: {data.email}</p>
                         < img className="imgProfile"
-                        src={foto1} alt="fotoPerfil"/>
+                        src={data.image} alt="fotoPerfil"/>
                     </div>
-                {/* ))} */}
+                ))}
             </div>
             <hr className="dividorMenu"/>
             <div className="BodyMenu_sideLeft">

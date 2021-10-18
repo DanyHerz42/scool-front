@@ -12,7 +12,7 @@ export const SearchOfClass = () => {
         alert(JSON.stringify(data));
     };
     
-    console.log(watch("example"));
+    // console.log(watch("example"));
 
     return (
         <div>
