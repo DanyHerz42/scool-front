@@ -39,8 +39,6 @@ export const EnrollClass = () => {
             >Nueva Clase</button>
             {/* <Modal active={active} toggle={toggle}> */}
             <Modal active={active} toggle={toggle}>
-                {/* <ModalCode /> */}
-                {/* <ModalCodeSuccess /> */}
                 {
                     activeModal.EnrollClass ? (<ModalCode openSuccessClass={openSuccessClass} 
                     />) : (<ModalCodeSuccess />)

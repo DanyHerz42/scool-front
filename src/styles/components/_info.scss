@@ -217,9 +217,13 @@
 }
 .containerInfoOFClass {
     width: 75%;
-    height: 100%;
+    height: 94vh;
     // background-color: #ffffff;
     // float: right;
+}
+
+.overflowY {
+    overflow-y: auto;
 }
 
 .headMenu_sideLeft {
@@ -349,9 +353,14 @@
         justify-content: center;
         // background-color: rgb(85, 165, 165);
         .imgPdf {
-            margin-right: 5px;
-            width: 70px;
-            height: 80px;
+            width: 50px;
+            height: 60px;
+        }
+        .fileStyle {
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 15px;
+
         }
     }
 }

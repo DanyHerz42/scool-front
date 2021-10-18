@@ -41,8 +41,8 @@ export const ClassStudent = (props) => {
             </div>
             <div className="container-class-body">
                 <p className="name-class">{datacard.name}</p>
-                <p>Próxima clase:</p>
-                <p className="nextClass">{datacard.next_class}</p>
+                {/* <p>Próxima clase:</p>
+                <p className="nextClass">{datacard.next_class}</p> */}
             </div>
         </div>
     )

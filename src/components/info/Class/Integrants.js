@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router'
 
-import profilePrfe from '../../../assets/profilePicture/foto1.jpg'
 import { getIntegrantsClass } from '../../../services/class'
 import { IntegrantsRow } from './IntegrantsRow'
 
