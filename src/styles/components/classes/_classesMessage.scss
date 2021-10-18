@@ -1,0 +1,37 @@
+.classes__container {
+   
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    margin-top: 50px;
+}
+
+.classes__message-container {
+    background-color: white;
+    height: 450px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px;
+
+    img {
+        margin-top: 30px;
+        height: 300px;
+        width: 300px;
+    }
+
+    p {
+        margin-top: 30px;
+    }
+}
+
+.classes__container-loading {
+   
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    margin-top: 300px;
+}

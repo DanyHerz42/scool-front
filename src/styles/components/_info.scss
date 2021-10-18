@@ -6,12 +6,27 @@
     // display: flex;
     // justify-content: center;
     // align-items: center;
+
+    
 }
 
 .container-classes {
     width: 100%; 
     height: 90%;
     overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        // background: #282c34;
+        background: $naranja;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        // background: #ccc;
+        border-radius: 10px;
+    }
 }
 // **** Head of Info ****//
 
@@ -76,7 +91,6 @@
         background-color: #fc9139;
     }
 }
-
 .alerta {
     color: #ff0000;
 }

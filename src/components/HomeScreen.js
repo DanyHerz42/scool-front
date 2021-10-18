@@ -15,7 +15,7 @@ export const HomeScreen = () => {
 
     const getClasses = async () => {
         const { classes } = await getClassesStudent();
-        // console.log(classes);
+        console.log(classes);
         setClasses({
             classes: classes
         })
