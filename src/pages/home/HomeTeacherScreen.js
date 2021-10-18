@@ -1,5 +1,4 @@
 import React, {useContext, useEffect, useState} from 'react'
-import { ClassStudent } from '../../components/info/ClassStudent';
 
 import { Chat } from '../../components/ui/chat/Chat';
 import { Header } from '../../components/ui/Header';
@@ -14,6 +13,7 @@ import { ClassesModal } from '../../components/ui/home/ClassesModal';
 import { getClassByTeacher } from '../../services/classes';
 import { ClassesMessage } from '../../components/ui/home/ClassesMessage';
 import { Loading } from '../../components/ui/Loading';
+import { ClassTeacher } from '../../components/ui/home/ClassTeacher';
 
 
 
@@ -72,27 +72,6 @@ export const HomeTeacherScreen = () => {
                     <input type="text" className="classes__search-input" placeholder="Buscar" />
                     <button><SearchIcon/></button>
                 </div>
-                    {/* {
-                         classes.length == 0 ? (
-                             <div className="classes__container">
-                                <ClassesMessage />
-                             </div>
-                         ) 
-                         :
-                         classes.map((datacard) => (
-                             <div className="container-class" key={datacard.id_class}> 
-                            <ClassStudent
-                                // key={datacard.id_class}
-                                datacard={datacard}
-                                // key={datacard.id_class}
-                            />
-                            </div>
-                        ))
-                    } */}
-                    {/* <div className="classes__container-loading">
-                        <Loading />
-                    </div> */}
-
                     {
                         loading ? (
                             <div className="classes__container-loading">
@@ -108,10 +87,8 @@ export const HomeTeacherScreen = () => {
                         :
                         classes.map((datacard) => (
                             <div className="container-class" key={datacard.id_class}> 
-                           <ClassStudent
-                               // key={datacard.id_class}
+                                <ClassTeacher
                                datacard={datacard}
-                               // key={datacard.id_class}
                            />
                            </div>
                        ))
