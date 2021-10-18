@@ -6,7 +6,7 @@ export const ChatCardMessage = () => {
         <div className="chat__container-chatCardMessage">
             <h2>Inicia conversación</h2>
             <img src={LogoConversation} alt="logo conversación" />
-            <p>Inicia una conversación para mandar mensajes a tus profesores.</p>
+            <p>Inicia una conversación para mandar mensajes a tus contactos.</p>
         </div>
     )
 }
