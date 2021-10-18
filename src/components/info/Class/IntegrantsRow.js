@@ -7,7 +7,7 @@ export const IntegrantsRow = (props) => {
         <>
             <div className="containerIntegrant">
                 <div className="containerFlex">
-                    <img className="picIntegrant" src={datacard.image} alt="imgAlumno"/>
+                    <img className="picIntegrant" src={datacard.image} alt="Integrant"/>
                     <div className="containerFlexJustCenter">
                         <p className="name_integrant">{datacard.name_user} {datacard.lastname}</p>
                     </div>

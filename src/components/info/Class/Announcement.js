@@ -22,14 +22,12 @@ export const Announcement = (props) => {
                     <p>{datacard.body_text}</p>
                 </div>
                 <div className="food_containerAct">
-                        {
-                        filesAttached.map((archivo) => (
-                            <>
-                                <img className="imgPdf" href={archivo.url} src={file} alt="File"/>
-                                <a className="fileStyle" href={`${urlBack}${archivo.url}`} >{archivo.filename}</a>
-                            </>
-                        ))
-                    }
+                    {filesAttached.map((archivo) => (
+                        <>
+                            <img className="imgPdf" href={archivo.url} src={file} alt="File"/>
+                            <a className="fileStyle" href={`${urlBack}${archivo.url}`} >{archivo.filename}</a>
+                        </>
+                    ))}
                 </div>
             </div>
         </>
