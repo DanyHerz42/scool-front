@@ -1,8 +1,43 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router'
+import { useHistory } from 'react-router-dom';
 
 import pdf from '../../../assets/imgs/pdf.PNG'
+import { getWorkFlowClass } from '../../../services/class';
 
 export const WorkFlow = () => {
+    // const params = useParams();
+    // console.log(params);
+    const { id } = useParams();
+    const History = useHistory();
+
+    const [arrPeriods, setArrPeriods] = useState(
+        {
+            loading: true,
+            workFlow: []
+        }
+    );
+    // let data = getWorkFlowClass(id);
+    // console.log(data);
+
+    // const { arrPeriods } = getWorkFlowClass(id)
+    // console.log (arrPeriods);
+
+    const getPeriod = async () => {
+        const { arrPeriods } = await getWorkFlowClass(id);
+        // console.log(arrPeriods);
+        setArrPeriods({
+            arrPeriods: arrPeriods
+        })
+    };
+
+    useEffect(() => {
+        getPeriod();
+        return () => {
+            setArrPeriods({});
+        };
+    }, []);
+    console.log(arrPeriods);
 
     return (
         <>

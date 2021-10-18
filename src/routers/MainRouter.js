@@ -26,9 +26,9 @@ export const MainRouter = () => {
             <div>
                 <Switch>
                     <Route exact path="/" component={HomeScreenPage} />
-                    <Route exact path="/clase/:key/flujoDeTrabajo" component={WorkFlowPage} />
-                    <Route exact path="/clase/:key/integrantes" component={IntegrantsPage} />
-                    <Route exact path="/clase/:key/calendario" component={CalendarPage} />
+                    <Route exact path="/clase/:id/flujoDeTrabajo" component={WorkFlowPage} />
+                    <Route exact path="/clase/:id/integrantes" component={IntegrantsPage} />
+                    <Route exact path="/clase/:id/calendario" component={CalendarPage} />
                     {/* <Route exact path="/clase/flujoDeTrabajo" component={WorkFlow} /> */}
                     <Route exact path="/calendar" component={CalendarScreen} />
                     <Route exact path="/chat" component={ChatScreen} />

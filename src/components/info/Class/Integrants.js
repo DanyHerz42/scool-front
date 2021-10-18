@@ -1,38 +1,49 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
+import { useHistory, useParams } from 'react-router'
 
 import profilePrfe from '../../../assets/profilePicture/foto1.jpg'
-import { IntegrantsStudent } from './IntegrantsStudent'
+import { getIntegrantsClass } from '../../../services/class'
+import { IntegrantsRow } from './IntegrantsRow'
 
 export const Integrants = () => {
+    const { id } = useParams();
+    const History = useHistory();
 
-    const apiIntegrants= [
+    const [teacher, setTeacher] = useState(
         {
-            "profesor": [
-                {
-                    "name_profe": "Gaurdiola",
-                    "Profile_picture": "../../assets/profilePicture/foto1.jpg",
-                },
-            ]
-        },
-        {
-            "alumnos": [
-                {
-                    "name": "student1",
-                    "imgStudent": "/student1"
-                },
-                {
-                    "name": "student2",
-                    "imgStudent": "/student2"
-                },
-                {
-                    "name": "student3",
-                    "imgStudent": "/student3"
-                },
-            ]
+            loading: true,
+            teacher: [],
         }
-    ];
+    );
 
-    // const [dataCardsIntegrants, setDataCardsIntegrants] = useState(apiIntegrants)
+    const [students, setStudents] = useState(
+        {
+            loading: true,
+            students: []
+        }
+    );
+
+    const getAllIntegrants = async () => {
+        const {integrants } = await getIntegrantsClass(id);
+        const { students } = integrants;
+        const { teacher } = integrants;
+
+        setTeacher({
+            teacher: teacher
+        });
+        setStudents({
+            students: students
+        });
+    };
+
+    useEffect(() => {
+        getAllIntegrants();
+        return () => {
+            setTeacher({});
+        };
+    }, []);    
+    console.log(teacher);
+    console.log(students);
 
     return (
         <>
@@ -44,23 +55,19 @@ export const Integrants = () => {
                     <div className="Subtitle_Integrants">
                         <p>Profesor</p>
                     </div>
-                    <div className="containerIntegrant">
-                        <div className="containerFlex">
-                            <img className="picIntegrant" src={profilePrfe} alt="fotoProfe"/>
-                            <div className="containerFlexJustCenter">
-                                <p className="name_integrant">Josep Guardiola</p>
-                            </div>
-                        </div>
-                        <hr/>
-                    </div>
+                    {teacher.teacher.map((datacard) => (
+                        <IntegrantsRow
+                            datacard={datacard}
+                        />
+                    ))}
                     <div className="Subtitle_Integrants">
                         <p>Alumnos</p>
                     </div>
-                    {/* {dataCardsIntegrants.alumnos.map((datacard) => ( */}
-                    <IntegrantsStudent
-                        // datacard={datacard.alumno}
-                    />
-                    {/* ))} */}
+                    {students.students.map((datacard) => (
+                        <IntegrantsRow
+                            datacard={datacard}
+                        />
+                    ))}
                 </div>
                 
             </div>

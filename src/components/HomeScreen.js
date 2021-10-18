@@ -18,7 +18,6 @@ export const HomeScreen = () => {
         // console.log(classes);
         setClasses({
             classes: classes
-
         })
     };
 
@@ -28,6 +27,8 @@ export const HomeScreen = () => {
             setClasses({});
         };
     }, []);
+    // console.log(classes.classes[1]["name"]);
+    // console.log(classes);
 
     return (
         <>

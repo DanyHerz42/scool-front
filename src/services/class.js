@@ -23,3 +23,27 @@ export const postEnrrollClass = async(unique_identifier) => {
         return body;
     }
 }
+
+export const getWorkFlowClass = async(id) => {
+    const resp = await fetchWithToken(`classes/get-workflow/${id}`);
+    const body = await resp.json();
+    // console.log(resp);
+    if(resp.status === 200) {
+        return body;
+    } else {
+        
+        return body;
+    }
+}
+
+export const getIntegrantsClass = async(id) => {
+    const resp = await fetchWithToken(`classes/get-integrants-class/${id}`);
+    const body = await resp.json();
+    // console.log(resp);
+    if(resp.status === 200) {
+        return body;
+    } else {
+        
+        return body;
+    }
+}
