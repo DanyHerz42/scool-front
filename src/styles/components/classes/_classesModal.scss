@@ -1,0 +1,58 @@
+.classes__container-createClass {
+    text-align: center;
+}
+
+.classes__form-createClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // height: 100%;
+    input, textarea, button,select {
+        margin-top: 10px;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $naranja;
+        }
+    }
+
+    input {
+        outline: none;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 5px;
+
+       
+    }
+
+    textarea {
+        height: 50px;
+        border-radius: 10px;
+        resize: none;
+        padding: 5px;
+    }
+
+    button {
+        // height: 40px;
+        background-color: $naranja;
+       
+        height: 40px;
+        outline: none;
+        border: none;
+        border-radius: 28px;
+        color: white;
+        font-size: 1.3em;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid white;
+        }
+    }
+
+    select {
+        border-radius: 10px;
+        height: 40px;
+        padding: 5px;
+    }
+}

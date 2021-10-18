@@ -1,22 +1,16 @@
-import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, {useContext} from 'react'
 import { UiContext } from '../../context/uiContext';
-import { types } from '../../types/types';
-
-// import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import { NavLink } from 'react-router-dom';
 import ClearIcon from '@material-ui/icons/Clear';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import ChatIcon from '@material-ui/icons/Chat';
-import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
-import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
+import { types } from '../../types/types';
 import { AuthContext } from '../../context/authContext';
 
-
-export const MenuShort = () => {
-
+export const MenuTeacherShort = () => {
     const {dispatch} = useContext(UiContext);
     const {dispatch: dispatchContext} = useContext(AuthContext)
 
@@ -32,6 +26,7 @@ export const MenuShort = () => {
     };
 
     const logout = () => ({type: types.authLogout});
+
 
     return (
         <div className="menu-short__container">
@@ -49,12 +44,6 @@ export const MenuShort = () => {
                     </li>
                     <li>
                         <NavLink to="/chat" activeClassName="menu-short__active"><ChatIcon /> </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/goals"><CardGiftcardIcon /></NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/autodidact"><LocalLibraryIcon /></NavLink>
                     </li>
                     <li>
                         <NavLink to="/homeworks"><FormatListBulletedIcon /></NavLink>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
     Switch,
     Route,
@@ -6,12 +6,17 @@ import {
 
 import { HomeScreenPage } from '../pages/Classes/HomeScreen';
 import { ProfileScreen } from '../pages/Profile/ProfileScreen';
-import {UiProvider } from '../context/uiContext';
+import { UiProvider } from '../context/uiContext';
 import { ProfileEditScreen } from '../pages/Profile/ProfileEditScreen';
 import { ChatScreen } from '../pages/Chat/ChatScreen';
 import { CalendarScreen } from '../pages/Calendar/CalendarScreen';
 import { HomeworkScreen } from '../pages/Homework/HomeworkScreen';
 import { Goal } from '../pages/Goal/Goal';
+import { AuthContext } from '../context/authContext';
+import { HomeworkTeacherScreen } from '../pages/Homework/HomeworkTeacherScreen';
+import { HomeTeacherScreen } from '../pages/home/HomeTeacherScreen';
+import { CalendarTeacherScreen } from '../pages/Calendar/CalendarTeacherScreen';
+import { ChatTeacherScreen } from '../pages/Chat/ChatTeacherScreen';
 
 // import { Class } from '../components/info/Class/ClassInfo'
 // import { WorkFlow } from '../components/info/Class/workFlow';
@@ -21,6 +26,7 @@ import { CalendarPage } from '../pages/Classes/CalendarPage';
 
 export const MainRouter = () => {
 
+<<<<<<< HEAD
     return (
         <UiProvider>
             <div>
@@ -38,6 +44,37 @@ export const MainRouter = () => {
                     <Route exact path="/profile" component={ProfileScreen} />
                     <Route exact path="/profile/edit" component={ProfileEditScreen} />
                 </Switch>
+=======
+    const { user } = useContext(AuthContext)
+
+    return (
+        <UiProvider>
+            <div>
+                {
+                    user.rol === 1 ? (
+                        <Switch>
+                            <Route exact path="/" component={HomeScreen} />
+                            <Route exact path="/calendar" component={CalendarScreen} />
+                            <Route exact path="/chat" component={ChatScreen} />
+                            <Route exact path="/goals" component={Goal} />
+                            <Route exact path="/autodidact" />
+                            <Route exact path="/homeworks" component={HomeworkScreen} />
+                            <Route exact path="/profile" component={ProfileScreen} />
+                            <Route exact path="/profile/edit" component={ProfileEditScreen} />
+
+                        </Switch>
+                    )
+                    :
+                        (
+                            <Switch>
+                                <Route exact path="/" component={HomeTeacherScreen} />
+                                <Route exact path="/calendar" component={CalendarTeacherScreen} />
+                                <Route exact path="/chat" component={ChatTeacherScreen} />
+                                <Route exact path="/homeworks" component={HomeworkTeacherScreen} />
+                            </Switch>
+                        )
+                }
+>>>>>>> jonathan
             </div>
         </UiProvider>
     )
