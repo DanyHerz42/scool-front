@@ -97,3 +97,17 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+
+.container-home-teacher {
+    grid-area: 2 / 3 / 6 / 5;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+
+}
+
+
+
+

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 
 import Modal from 'react-modal';
+import { Redirect, useHistory } from 'react-router';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../context/authContext';
 import { UseForm } from '../../../hooks/useForm';
@@ -28,6 +29,8 @@ Modal.setAppElement('#root');
 export const ClassesModal = ({ modalOpen, closeModal }) => {
 
 
+    const history = useHistory();
+
     const initialForm = {
         name: '',
         cantAlumnos: '',
@@ -51,8 +54,13 @@ export const ClassesModal = ({ modalOpen, closeModal }) => {
 
             Swal.fire('Error', 'Completa los campos correctamente', 'error')
         } else {
-            const data = await createClass(name, cantAlumnos, description, color);
-            console.log(data);
+            const {ok} = await createClass(name, cantAlumnos, description, color);
+            if (ok) {
+                closeModal();
+                // history.push('/');
+            } else {
+                Swal.fire('Error', 'Hubo un error', 'error')
+            }
         }
         // console.log(formValues);
 
@@ -61,43 +69,6 @@ export const ClassesModal = ({ modalOpen, closeModal }) => {
     // const resetModal = () => {
     //     closeModal();
     //     reset()
-    // }
-
-    // const options = () => {
-    //     if (cantPeriods == 1) {
-    //         return (
-    //             <>
-    //                 <input type="text" placeholder="Nombre del periodo" />
-    //                 <input type="datetime-local" />
-    //                 <input type="datetime-local" />
-    //             </>
-    //         )
-    //     } else if (cantPeriods == 2) {
-    //         return (
-    //             <>
-    //                 <input type="text" placeholder="Nombre del periodo" />
-    //                 <input type="datetime-local" />
-    //                 <input type="datetime-local" />
-    //                 <input type="text" placeholder="Nombre del periodo" />
-    //                 <input type="datetime-local" />
-    //                 <input type="datetime-local" />
-    //             </>
-    //         )
-    //     } else {
-    //         return (
-    //             <>
-    //                 <input type="text" placeholder="Nombre del periodo" />
-    //                 <input type="datetime-local" />
-    //                 <input type="datetime-local" />
-    //                 <input type="text" placeholder="Nombre del periodo" />
-    //                 <input type="datetime-local" />
-    //                 <input type="datetime-local" />
-    //                 <input type="text" placeholder="Nombre del periodo" />
-    //                 <input type="datetime-local" />
-    //                 <input type="datetime-local" />
-    //             </>
-    //         )
-    //     }
     // }
 
     return (

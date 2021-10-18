@@ -52,6 +52,7 @@ export const MainRouter = () => {
                                 <Route exact path="/calendar" component={CalendarTeacherScreen} />
                                 <Route exact path="/chat" component={ChatTeacherScreen} />
                                 <Route exact path="/homeworks" component={HomeworkTeacherScreen} />
+                                <Route exact path="/profile" component={ProfileScreen} />
                             </Switch>
                         )
                 }
