@@ -26,25 +26,6 @@ import { CalendarPage } from '../pages/Classes/CalendarPage';
 
 export const MainRouter = () => {
 
-<<<<<<< HEAD
-    return (
-        <UiProvider>
-            <div>
-                <Switch>
-                    <Route exact path="/" component={HomeScreenPage} />
-                    <Route exact path="/clase/:key/flujoDeTrabajo" component={WorkFlowPage} />
-                    <Route exact path="/clase/:key/integrantes" component={IntegrantsPage} />
-                    <Route exact path="/clase/:key/calendario" component={CalendarPage} />
-                    {/* <Route exact path="/clase/flujoDeTrabajo" component={WorkFlow} /> */}
-                    <Route exact path="/calendar" component={CalendarScreen} />
-                    <Route exact path="/chat" component={ChatScreen} />
-                    <Route exact path="/goals" component={Goal}/>
-                    <Route exact path="/autodidact" />
-                    <Route exact path="/homeworks" component={HomeworkScreen} />
-                    <Route exact path="/profile" component={ProfileScreen} />
-                    <Route exact path="/profile/edit" component={ProfileEditScreen} />
-                </Switch>
-=======
     const { user } = useContext(AuthContext)
 
     return (
@@ -53,7 +34,7 @@ export const MainRouter = () => {
                 {
                     user.rol === 1 ? (
                         <Switch>
-                            <Route exact path="/" component={HomeScreen} />
+                            <Route exact path="/" component={HomeScreenPage} />
                             <Route exact path="/calendar" component={CalendarScreen} />
                             <Route exact path="/chat" component={ChatScreen} />
                             <Route exact path="/goals" component={Goal} />
@@ -74,7 +55,6 @@ export const MainRouter = () => {
                             </Switch>
                         )
                 }
->>>>>>> jonathan
             </div>
         </UiProvider>
     )

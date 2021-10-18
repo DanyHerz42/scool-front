@@ -85,6 +85,14 @@ export const HomeTeacherScreen = () => {
                             </div>
                         ) 
                         :
+                    //     classes.map((datacard) => (
+                    //         <div className="container-class" key={datacard.id_class}> 
+                    //             <ClassTeacher
+                    //            datacard={datacard}
+                    //        />
+                    //        </div>
+                    //    ))
+                    (
                         classes.map((datacard) => (
                             <div className="container-class" key={datacard.id_class}> 
                                 <ClassTeacher
@@ -92,6 +100,7 @@ export const HomeTeacherScreen = () => {
                            />
                            </div>
                        ))
+                    )
                     }
                 
                 <div className="classes__teacher-newClass" onClick={openModal}>
