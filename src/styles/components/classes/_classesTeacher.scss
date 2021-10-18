@@ -1,0 +1,72 @@
+.classes__teacher-newClass {
+    border-radius: 100%;
+    bottom: 25px;
+    position: fixed;
+    right: 35px;
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include backgroundScool();
+    cursor: pointer;
+    svg {
+        color: white;
+        font-size: 3em;
+    }
+
+    &:hover {
+        height: 65px;
+        width: 65px;
+    }
+}
+
+.classes__container-header {
+    width: 100%;
+    height: 10%;
+    min-height: 90px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px #b9b9b9;
+    display: flex;
+    align-items: center;
+  
+    input {
+        margin-left: 10px;
+        width: 30%;
+        // min-width: 200px;
+        height: 50px;
+        // outline: none;
+        background-color: #e4e4e4;
+        border: none;
+        // margin: 1rem 0 1rem 1rem;
+        border-radius: 15px 0 0 15px;
+        font-size: 1em;
+        // padding: 10px;
+        padding: 0px 10px;
+
+        &:focus {
+            outline: none;
+            border: 1px solid #FF4E50;
+            border-radius: 15px 0 0 15px;
+        }
+    }
+
+    button {
+        border-radius: 0 15px 15px 0;
+        height: 50px;
+        // border: transparent;
+        // padding: 6px 10px 10px 10px;
+        background-color: #ffaf6e;
+        cursor: pointer;
+        border: none;
+
+        svg {
+            &:hover {
+                color: white;
+            }
+        }
+     
+
+    }
+}

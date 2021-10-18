@@ -28,10 +28,11 @@ export const LoginScreen = ({history}) => {
        const loginData = await startLogin(email, password);
        if(loginData.token) {
            localStorage.setItem('token', loginData.token);
-           const {id_user, name_user} = jwt_decode(loginData.token).userFound[0];
+           const {id_user, name_user, id_role} = jwt_decode(loginData.token).userFound[0];
            dispatch(login({
                id: id_user,
                name: name_user,
+               rol: id_role,
                token: loginData.token
            }))
        } else {

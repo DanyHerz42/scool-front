@@ -1,14 +1,14 @@
 import React, { useContext, useState } from 'react'
-import { UiContext } from '../../context/uiContext';
-import { Header } from '../../components/ui/Header';
-import { Menu } from '../../components/ui/Menu'
-import { MenuShort } from '../../components/ui/MenuShort';
 import { Chat } from '../../components/ui/chat/Chat';
-import { ChatCard } from '../../components/ui/chat/ChatCard';
-import { ChatMessages } from '../../components/ui/chat/ChatMessages';
 import { ChatCardMessage } from '../../components/ui/chat/ChatCardMessage';
+import { ChatCardTeacher } from '../../components/ui/chat/ChatCardTeacher';
+import { ChatMessages } from '../../components/ui/chat/ChatMessages';
+import { Header } from '../../components/ui/Header';
+import { MenuTeacher } from '../../components/ui/MenuTeacher';
+import { MenuTeacherShort } from '../../components/ui/MenuTeacherShort';
+import { UiContext } from '../../context/uiContext';
 
-export const ChatScreen = () => {
+export const ChatTeacherScreen = () => {
     const {menu} = useContext(UiContext);
 
     const [showChat, setShowChat] = useState(false)
@@ -16,12 +16,12 @@ export const ChatScreen = () => {
     return (
         <div  className={menu.menuOpen ? 'container-main-complete' : 'container-main-short'}>
             {
-                menu.menuOpen ? <Menu /> : <MenuShort />
+                menu.menuOpen ? <MenuTeacher /> : <MenuTeacherShort />
             }
             <Header title="Chat" />
             <Chat />
             <div className="container-chat">
-                <ChatCard setShowChat={setShowChat} />
+                <ChatCardTeacher setShowChat={setShowChat} />
                 {
                     showChat ? <ChatMessages /> : <ChatCardMessage />
                 }

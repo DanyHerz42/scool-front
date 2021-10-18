@@ -4,10 +4,10 @@ import React from 'react'
 
 export const ClassStudent = (props) => {
 
-    const { key, datacard } = props;
+    const { datacard } = props;
 
     return (
-        <div className="container-class" key={key}>
+        <div/*  className="container-class" key={datacard.id_class} */>
             <div className="container-class-head">
                 <div className="carpeta">
                     <svg className="icon--plus">

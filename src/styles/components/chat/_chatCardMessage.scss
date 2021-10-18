@@ -1,0 +1,19 @@
+.chat__container-chatCardMessage{
+    height: 80%;
+    width: 65%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin-top: 30px;
+        height: 300px;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+}
