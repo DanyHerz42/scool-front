@@ -489,6 +489,13 @@
         height: 150px;
     }
 }
+.containerActSendCompleta{
+    height: 70%;
+    .bodyComplete {
+        height: 150px;
+    }
+}
+
 .containerAnnounCompleta{
     height: 50%;
     .bodyComplete {
@@ -562,6 +569,18 @@
         margin-top: 20px;
         width: 30%;
         height: 50px;
+        &:hover {
+            background-color: #ff9c4a;
+        }
     }
 }
 
+.textSuccess {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    color: #33c73f;
+    font-weight: bold;
+    font-size: 24px;
+}

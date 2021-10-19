@@ -29,8 +29,8 @@ export const Announcement = (props) => {
 
     return (
         <>
-            <div className="containerAct" onClick={ ()=>openAnnoun() }>
-                <div className="head_containerAct">
+            <div className="containerAct">
+                <div className="head_containerAct" onClick={ ()=>openAnnoun() }>
                     <div className="namePost">
                         <p>{datacard.title}</p>
                     </div>
@@ -41,10 +41,9 @@ export const Announcement = (props) => {
                         <p>P{datacard.id_period}</p>
                     </div>
                 </div>
-                <div className="body_containerAct">
+                <div className="body_containerAct"  onClick={ ()=>openAnnoun() }>
                     <p>{datacard.body_text}</p>
                 </div>
-                
                 <div className="food_containerAct">
                     {filesAttached.map((archivo) => (
                         <>

@@ -6,20 +6,19 @@ import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router';
 
 import file from '../../../assets/imgs/file.png'
-import { DragArea } from './DragArea';
 
 const urlBack = "https://scool-server.herokuapp.com"
 
-export const Activity = () => {
+export const ActivitySend = () => {
     const location = useLocation();
     const History = useHistory();
     const { id } = useParams();
 
     const datacard = location.state.datacard
-    // console.log(data.id_homework);
-    const sendHomeW = () => {
+    console.log(datacard.id_homework);
+    const hwNoSend = () => {
         History.push({
-            pathname: `/clase/${id}/actividadSend/${datacard.id_homework}`,
+            pathname: `/clase/${id}/actividad/${datacard.id_homework}`,
             state: {
                 datacard
             },
@@ -35,7 +34,7 @@ export const Activity = () => {
                     />
                 <p className="noActivity">{datacard.title}</p>
             </div>
-            <div className="containerActCompleta containerAct">
+            <div className="containerActSendCompleta containerAct">
                 <div className="head_containerAct">
                     <div className="name">
                         <p>{datacard.title}</p>
@@ -60,12 +59,12 @@ export const Activity = () => {
                     ))}
                 </div>
                 <hr className="dividor"/>
-                <div className="uploadFileContainter">
-                    <DragArea />
+                <div className="textSuccess">
+                    <p>Tarea entregada</p>
                 </div>
                 <div className="Container_btnEnviarHw">
-                    <button type="primary" className="btnEnviarHw btnAcept_modal" onClick={ ()=>sendHomeW() }>
-                        Entregar actividad
+                    <button type="primary" className="btnEnviarHw btnAcept_modal" onClick={ ()=>hwNoSend() }>
+                        Anular envio
                     </button>
                 </div>
                 <div className="containerComentario">

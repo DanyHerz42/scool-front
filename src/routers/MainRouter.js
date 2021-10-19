@@ -22,6 +22,7 @@ import { IntegrantsPage } from '../pages/Classes/IntegrantsPage';
 import { CalendarPage } from '../pages/Classes/CalendarPage';
 import { ActivityPage } from '../pages/Classes/ActivityPage';
 import { AnnounPage } from '../pages/Classes/AnnounPage';
+import { ActivitySendPage } from '../pages/Classes/ActivitySendPage';
 
 export const MainRouter = () => {
 
@@ -37,6 +38,7 @@ export const MainRouter = () => {
                             <Route exact path="/clase/:id/flujoDeTrabajo" component={WorkFlowPage} />
                             <Route exact path="/clase/:id/anuncio/:idPos" component={AnnounPage} />
                             <Route exact path="/clase/:id/actividad/:idPos" component={ActivityPage} />
+                            <Route exact path="/clase/:id/actividadSend/:idPos" component={ActivitySendPage} />
                             <Route exact path="/clase/:id/integrantes" component={IntegrantsPage} />
                             <Route exact path="/clase/:id/calendario" component={CalendarPage} />
                             <Route exact path="/calendar" component={CalendarScreen} />

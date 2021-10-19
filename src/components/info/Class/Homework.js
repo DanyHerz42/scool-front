@@ -26,8 +26,8 @@ export const HomeWork = (props) => {
     
     return (
         <>
-            <div className="containerAct" onClick={ ()=>openHw() }>
-                <div className="head_containerAct">
+            <div className="containerAct">
+                <div className="head_containerAct" onClick={ ()=>openHw() }>
                     <div className="name">
                         <p>{datacard.title}</p>
                     </div>
@@ -38,7 +38,7 @@ export const HomeWork = (props) => {
                         <p>P{datacard.id_period}</p>
                     </div>
                 </div>
-                <div className="body_containerAct">
+                <div className="body_containerAct" onClick={ ()=>openHw() }>
                     <p>{datacard.body_text}</p>
                 </div>
                 <div className="food_containerAct">
