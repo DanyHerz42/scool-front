@@ -23,6 +23,7 @@ import { CalendarPage } from '../pages/Classes/CalendarPage';
 import { ActivityPage } from '../pages/Classes/ActivityPage';
 import { AnnounPage } from '../pages/Classes/AnnounPage';
 import { ActivitySendPage } from '../pages/Classes/ActivitySendPage';
+import { AutodidactPage } from '../pages/autodidact/AutodidactPage';
 
 export const MainRouter = () => {
 
@@ -44,7 +45,7 @@ export const MainRouter = () => {
                             <Route exact path="/calendar" component={CalendarScreen} />
                             <Route exact path="/chat" component={ChatScreen} />
                             <Route exact path="/goals" component={Goal} />
-                            <Route exact path="/autodidact" />
+                            <Route exact path="/autodidact" component={AutodidactPage}/>
                             <Route exact path="/homeworks" component={HomeworkScreen} />
                             <Route exact path="/profile" component={ProfileScreen} />
                             <Route exact path="/profile/edit" component={ProfileEditScreen} />

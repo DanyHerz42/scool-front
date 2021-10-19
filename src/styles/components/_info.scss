@@ -42,6 +42,14 @@
     flex-wrap: wrap;
 }
 
+.headAutodi {
+    background-color: transparent;
+    justify-content: flex-start;
+}
+.headAutoLeft {
+    display: initial;
+}
+
 // ******** agregar una clase ******/
 .new_class {
     width: 20%;
@@ -119,6 +127,17 @@
     box-shadow: 7px 7px 15px #b9b9b9; 
 }
 
+.container-classAutodi{
+    display: inline-block;
+    padding: 1%;
+    margin: 1% ;
+    width: 21%;
+    min-width: 280px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 7px 7px 15px #b9b9b9; 
+}
+
 .fotoPerfil-profe {
     width: 55px;
     height: 55px;
@@ -131,6 +150,22 @@
 .container-class-body p{
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container-class-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    button {
+        background-color: #fd8726;
+        color: #ffffff;
+        height: 40px;
+        width: 80%;
+        border: none;
+        border-radius: 30px;
+        font-size: 18px;
+    }
 }
 
 .name-class {
