@@ -7,6 +7,8 @@ import { Chat } from '../../components/ui/chat/Chat';
 
 import { MenuLeftClass } from '../../components/info/Class/MenuLeftClass';
 import { ClassCalendar } from '../../components/info/Class/ClassCalendar';
+import { CalendarCard } from '../../components/ui/Calendar/CalendarCard';
+import { Calendar } from '../../components/ui/Calendar/Calendar';
 
 export const CalendarPage = () => {
     const {menu} = useContext(UiContext);
@@ -24,6 +26,8 @@ export const CalendarPage = () => {
                     />
                     <div className="containerInfoOFClass">
                         <ClassCalendar/>
+                        {/* <CalendarCard/>
+                        <Calendar/> */}
                     </div>
                 </div>
             </div>
