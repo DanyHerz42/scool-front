@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../../context/authContext';
 
 
 
 export const ClassTeacher = (props) => {
 
     const { datacard } = props;
+    const {user} = useContext(AuthContext)
 
     return (
         <>
@@ -17,12 +19,14 @@ export const ClassTeacher = (props) => {
                             points="53 78, 190 25, 228 78" />
                         <polygon fill={datacard.color}
                             points="38 185, 25 65, 257 65, 242 185" />
-                        <text className="nameProfe" x="60" y="125" fill="white">
-                            Prof. {datacard.teacher_username}
+                        <text className="nameProfe" x="90" y="125" fill="white">
+                            Prof. {user.name}
+                            
                         </text>
                     </svg>
                     {/* < img className="fotoPerfil-profe"
                     src={datacard.Profile_picture} alt="fotoPerfil"/> */}
+                    
                 </div>
             </div>
             <div className="container-class-body">

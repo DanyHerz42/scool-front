@@ -29,12 +29,13 @@ export const AppRouter = () => {
         const resData = await startChecking();
         if (resData.ok) {
             localStorage.setItem('token', resData.token);
-            const { id_user, name_user, id_role } = jwt_decode(resData.token).userFound[0];
+            const { id_user, name_user, id_role, nickname } = jwt_decode(resData.token).userFound[0];
             dispatch(login({
                 id: id_user,
                 name: name_user,
                 token: resData.token,
-                rol: id_role
+                rol: id_role,
+                nickname
             }))
         } else {
             dispatch(checkingFinish());

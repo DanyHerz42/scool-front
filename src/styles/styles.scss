@@ -27,6 +27,16 @@
 @import './components/classes/classesModal';
 @import './components/classes/classesMessage';
 
+@import './components/classes/teacher/classesCardTeacher';
+@import './components/classes/teacher/classesWorflowTeacher';
+@import './components/classes/teacher/classesIntegrantsTeacher';
+@import './components/classes/teacher/classesCalendarTeacher';
+@import './components/classes/teacher/classesModalActs';
+@import './components/classes/teacher/classesCreateAct';
+@import './components/classes/teacher/classesCreateAnnouncement';
+@import './components/classes/teacher/classesCreateCalendar';
+
+
 @import './components/menu';
 @import './components/menuShort';
 @import './components/header';

@@ -98,33 +98,7 @@ export const ClassesModal = ({ modalOpen, closeModal }) => {
                         <input type="text" name="namePeriod" placeholder="Nombre del periodo" value={namePeriod} onChange={handleInputChange} />
                         <input name="period1Start" type="datetime-local" value={period1Start} onChange={handleInputChange} />
                         <input name="period2End" type="datetime-local" value={period2End} onChange={handleInputChange} />
-                        {/* <select name="cantPeriods" onChange={handleInputChange}>
-                            <option>Elige la cantidad de periodos</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="e">3</option>
-                        </select> */}
-                        {/* {
-                            // cantPeriods == 1 ? (
-                            //     <>
-                            //     <input type="text" placeholder="Nombre del periodo"/>
-                            //     <input type="datetime-local" />
-                            //     <input type="datetime-local" />
-                            //     </>
-                            // )
-                            // : (
-                            //     <>
-                            //     <input type="text" placeholder="Nombre del periodo"/>
-                            //     <input type="datetime-local" />
-                            //     <input type="datetime-local" />
-                            //     <input type="text" placeholder="Nombre del periodo"/>
-                            //     <input type="datetime-local" />
-                            //     <input type="datetime-local" />
-                            //     </>
-                            // )
-
-                            // options()
-                        } */}
+            
                         <button>Crear</button>
                     </form>
                 </div>

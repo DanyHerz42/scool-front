@@ -19,7 +19,7 @@ import { ClassNotFound } from '../../components/ui/home/ClassNotFound';
 
 
 
-export const HomeTeacherScreen = () => {
+export const HomeTeacherScreen = ({history}) => {
     const { menu } = useContext(UiContext);
 
 
@@ -89,7 +89,7 @@ export const HomeTeacherScreen = () => {
                 });
                 return valor;
             });
-            console.log(fin);
+          
             if (fin.length > 0) {
                 setClassesState({
                     ...classesState,
@@ -115,7 +115,9 @@ export const HomeTeacherScreen = () => {
 
     }
 
-    console.log(classesState);
+    console.log(classes);
+
+   
     return (
         <div className={menu.menuOpen ? 'container-main-complete' : 'container-main-short'}>
             {
@@ -143,37 +145,6 @@ export const HomeTeacherScreen = () => {
                             )
                                 :
 
-                                // (
-                                //     classes.map((datacard) => (
-                                //         <div className="container-class" key={datacard.id_class}>
-                                //             <ClassTeacher
-                                //                 datacard={datacard}
-                                //             />
-                                //         </div>
-                                //     ))
-                                // )
-
-                                // classesCopy.length > 0 ? (
-                                //     (
-                                //         classesCopy.map((datacard) => (
-                                //             <div className="container-class" key={datacard.id_class}>
-                                //                 <ClassTeacher
-                                //                     datacard={datacard}
-                                //                 />
-                                //             </div>
-                                //         ))
-                                //     )
-                                // ) :
-                                // (
-                                //     classes.map((datacard) => (
-                                //         <div className="container-class" key={datacard.id_class}>
-                                //             <ClassTeacher
-                                //                 datacard={datacard}
-                                //             />
-                                //         </div>
-                                //     ))
-                                // )
-
                                 notFound ? (
                                     <div className="classes__container">
                                         <ClassNotFound />
@@ -188,12 +159,12 @@ export const HomeTeacherScreen = () => {
                                                     datacard={datacard}
                                                 />
                                             </div>
-                                        ))
+                                        ))  
                                     )
                                 ) :
                                 (
                                     classes.map((datacard) => (
-                                        <div className="container-class" key={datacard.id_class}>
+                                        <div className="container-class" key={datacard.id_class} onClick={() => history.push(`/class/${datacard.id_class}/workflow`)} >
                                             <ClassTeacher
                                                 datacard={datacard}
                                             />
