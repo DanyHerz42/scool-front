@@ -19,6 +19,21 @@
         margin-top: 20px;
     }
 
+    .chat__img-profile {
+        border: 1px solid $naranja;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        img {
+            height: 35px;
+            width: 35px;
+        }
+    }
+
     &::-webkit-scrollbar {
         width: 3px;
         
