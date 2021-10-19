@@ -4,14 +4,14 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { useLocation } from 'react-router-dom';
 
 import file from '../../../assets/imgs/file.png'
-import { DragArea } from './DragArea';
+// import { DragArea } from './DragArea';
 
 const urlBack = "https://scool-server.herokuapp.com"
 
-export const Activity = () => {
+export const ActivityPost = () => {
     const location = useLocation();
     const data = location.state.datacard
-    // console.log(data);
+    console.log(data);
 
     return (
         <>
@@ -22,13 +22,13 @@ export const Activity = () => {
                     />
                 <p className="noActivity">{data.title}</p>
             </div>
-            <div className="containerActCompleta containerAct">
+            <div className="containerAnnounCompleta containerAct">
                 <div className="head_containerAct">
-                    <div className="name">
-                        <p>{data.title}</p>
+                    <div className="namePost">
+                            <p>{data.title}</p>
                     </div>
                     <div className="nameActivity">
-                        <p>{data.subtitle}</p>
+                            <p>{data.subtitle}</p>
                     </div>
                     <div className="periodo">
                         <p>P{data.id_period}</p>
@@ -47,14 +47,14 @@ export const Activity = () => {
                     ))}
                 </div>
                 <hr className="dividor"/>
-                <div className="uploadFileContainter">
+                {/* <div className="uploadFileContainter">
                     <DragArea />
                 </div>
                 <div className="Container_btnEnviarHw">
                     <button type="primary" className="btnEnviarHw btnAcept_modal" onClick="">
                         Entregar actividad
                     </button>
-                </div>
+                </div> */}
                 <div className="containerComentario">
                     <form>
                         <input className="inputTarea input_Modal" placeholder="Añadir comentario"

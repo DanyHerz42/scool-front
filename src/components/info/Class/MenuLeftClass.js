@@ -66,7 +66,7 @@ export const MenuLeftClass = () => {
                 {teacher.teacher.map((data) => (            
                     <div>
                         <p className="textMenuLeft">Profesor: {data.name_user} {data.lastname}</p>
-                        <p className="textMenuLeft"></p>
+                        {/* <p className="textMenuLeft"></p> */}
                         <p className="textMenuLeft">Correo: {data.email}</p>
                         < img className="imgProfile"
                         src={data.image} alt="fotoPerfil"/>
@@ -75,9 +75,9 @@ export const MenuLeftClass = () => {
             </div>
             <hr className="dividorMenu"/>
             <div className="BodyMenu_sideLeft">
-                <NavLink to="./flujoDeTrabajo" activeClassName="activeBtn">Flujo de trabajo</NavLink>
-                <NavLink to="./integrantes" activeClassName="activeBtn">Integrantes</NavLink>
-                <NavLink to="./calendario" activeClassName="activeBtn">Calendario de clase</NavLink>
+                <NavLink to={`/clase/${id}/flujoDeTrabajo`} activeClassName="activeBtn">Flujo de trabajo</NavLink>
+                <NavLink to={`/clase/${id}/integrantes`} activeClassName="activeBtn">Integrantes</NavLink>
+                <NavLink to={`/clase/${id}/calendario`} activeClassName="activeBtn">Calendario de clase</NavLink>
             </div>
         </div>
     )
