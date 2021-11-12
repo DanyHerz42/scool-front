@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router'
 
-import file from '../../../assets/imgs/file.png'
+import file from '../../../../assets/imgs/file.png'
 
 export const Announcement = (props) => {
     const { datacard } = props;
