@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { 
+import {
     // useHistory,
-    useParams } from 'react-router'
+    useParams
+} from 'react-router'
 
 import { getIntegrantsClass } from '../../../services/class'
-import { Loading } from '../../ui/Loading'
+// import { Loading } from '../../ui/Loading'
 import { IntegrantsRow } from './IntegrantsRow'
 import { NameStudent } from './SortBy/NameStudent'
+import LoadingLogo from '../../../assets/imgs/loading.png'
+
 
 export const Integrants = () => {
     const { id } = useParams();
@@ -91,7 +94,10 @@ export const Integrants = () => {
                         </button>
                         <br /><br />
                         {loading === false ? (null) : (
-                            <Loading />
+                            // <Loading />
+                            <div className="container-loading">
+                                <img className="loading-spinner" src={LoadingLogo} alt="loading img" />
+                            </div>
                         )}
                         {name === null ? (null) : (
                             <NameStudent
