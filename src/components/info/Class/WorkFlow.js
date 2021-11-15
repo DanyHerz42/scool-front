@@ -3,11 +3,8 @@ import { useParams } from 'react-router'
 import { useHistory } from 'react-router-dom';
 import Select from 'react-select'
 
-import pdf from '../../../assets/imgs/pdf.PNG'
 import { getWorkFlowClass } from '../../../services/class';
-import { Announcement } from './SortBy/Announcement';
 import { DateWorkFlow } from './SortBy/DateWorkFlow';
-import { HomeWork } from './SortBy/Homework';
 import { PeriodWorkFlow } from './SortBy/PeriodWorkFlow';
 
 export const WorkFlow = () => {
@@ -71,6 +68,7 @@ export const WorkFlow = () => {
             <div className="head_containerInfoOFClass">
                 <p className="title_sectionClass">Flujo de trabajo</p>
                 <div className="selectWorkFlow">
+                    <label>Ordenar por:</label>
                     <Select
                         value={value}
                         options={options}

@@ -10,7 +10,6 @@ export const PeriodWorkFlow = (props) => {
             {periodos.map((datacard) => (
                 <Period datacard={datacard} />
             ))}
-            {/* <p>Hola</p> */}
         </>
     )
 }

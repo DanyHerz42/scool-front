@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import { useHistory, useParams } from 'react-router'
+import { 
+    // useHistory,
+    useParams } from 'react-router'
 
 import { getIntegrantsClass } from '../../../services/class'
+import { Loading } from '../../ui/Loading'
 import { IntegrantsRow } from './IntegrantsRow'
+import { NameStudent } from './SortBy/NameStudent'
 
 export const Integrants = () => {
     const { id } = useParams();
-    const History = useHistory();
+    // const History = useHistory();
+    const [loading, setLoading] = useState(false)
+    const [name, setName] = useState(null)
+
 
     const [teacher, setTeacher] = useState(
         {
@@ -23,7 +30,7 @@ export const Integrants = () => {
     );
 
     const getAllIntegrants = async () => {
-        const {integrants } = await getIntegrantsClass(id);
+        const { integrants } = await getIntegrantsClass(id);
         const { students } = integrants;
         const { teacher } = integrants;
 
@@ -41,9 +48,27 @@ export const Integrants = () => {
             setTeacher({});
             setStudents({});
         };
-    }, []);    
-    // console.log(teacher);
-    // console.log(students);
+    }, []);
+
+    const animacionSorteo = () => {
+        setName(null)
+        setLoading(true)
+        setTimeout(() => getStudent(), 250);
+    }
+
+    const getStudent = () => {
+        setLoading(false)
+        var estudiantes = students.students
+        var ancho = students.students.length
+        var numRandom = Math.floor(Math.random() * (ancho))
+        var estudiante = estudiantes[numRandom]
+        var nameStudent = `${estudiante.name_user} ${estudiante.lastname}`
+        setName(nameStudent)
+    }
+
+    const clearName = () => {
+        setName(null)
+    }
 
     return (
         <>
@@ -60,6 +85,21 @@ export const Integrants = () => {
                             datacard={datacard}
                         />
                     ))}
+                    <div className="sorteoIntegrante">
+                        <button className="sorteo" onClick={animacionSorteo}>
+                            Escoger un alumno al azar
+                        </button>
+                        <br /><br />
+                        {loading === false ? (null) : (
+                            <Loading />
+                        )}
+                        {name === null ? (null) : (
+                            <NameStudent
+                                name={name}
+                                clearName={clearName}
+                            />
+                        )}
+                    </div>
                     <div className="Subtitle_Integrants">
                         <p>Alumnos</p>
                     </div>
@@ -69,9 +109,9 @@ export const Integrants = () => {
                         />
                     ))}
                 </div>
-                
+
             </div>
-            
+
         </>
     )
 }

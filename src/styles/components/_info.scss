@@ -461,6 +461,28 @@
             margin-bottom: 2%;
             margin-top: 3%;
         }
+        .sorteoIntegrante {
+            // background-color: #28923a;
+            // display: flex;
+            // justify-content: center;
+            text-align: center;
+            margin: 50px 0px 50px;
+
+            .sorteo {
+                background-color: #fc9139;
+                color: #ffffff;
+                height: 50px;
+                border: none;
+                border-radius: 15px;
+                letter-spacing: 1.2px;
+                padding: 15px;
+                font-size: 15px;
+                &:hover {
+                    background-color: #ff9742;
+                    box-shadow: 1px 2px 5px #ff0000;
+                }
+            }
+        }
         .containerIntegrant {
             .containerFlex {
                 display: flex;
@@ -631,49 +653,54 @@
     margin-right: 10px;
 }
 
+/////*colapsador**/////
 .separadorPeriod {
-    width: 100%;
-    background-color: #d0d7de;
+    width: 98%;
+    background-color: #ff9c4a;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+    // border: solid 1px #000000;
+    margin: 1%;
 }
 
-
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
+// ******* sorteo integrante ******** //
+.nameOfRaffle {
+    // background-color: #33c73f;
+    display: flex;
     width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-  }
-  
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  .accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2212";
-  }
-  
-  .panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-  }
+    justify-content: center;
+    .contentName {
+        display: flex;
+        width: 40%;
+        height: 60px;
+        font-size: 26px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #aaaaaa;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+        box-shadow: 1px 3px 7px #ff0000;
+    }
+    
+}
+
+.btnClearSort {
+    display: flex;
+    justify-content: flex-end;
+    button {
+        background-color: #e4e4e4;
+        height: 25px;
+        border-radius: 10px;
+        border: none;
+        &:active {
+            background-color: #ffffff;
+        }
+    }
+}
